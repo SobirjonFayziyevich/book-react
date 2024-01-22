@@ -1,11 +1,14 @@
+import { Container, Stack } from '@mui/material';
 import React from 'react';
 import "../css/App.css";
 
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+   < Container maxWidth="sm">
+     <Stack>
+       
+     </Stack>
+   </Container>
   );
 }
 
