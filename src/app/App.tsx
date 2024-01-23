@@ -1,6 +1,5 @@
 import React from 'react';
-import '../css/App.css';
-import {BrowserRouter as Router, Route, Link,} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
 
 import {BookPage} from "./screens/BookPage";
 import {CommunityPage} from "./screens/CommunityPage";
@@ -9,42 +8,26 @@ import {HelpPage} from "./screens/HelpPage";
 import {LoginPage} from "./screens/LoginPage";
 import {HomePage} from "./screens/HomePage";
 import {OrdersPage} from "./screens/OrdersPage";
-// import {Footer} from "./components/footer";
-// import "../css/navbar.css";
-// import "../css/footer.css";
-import { Switch } from '@mui/base';
+import "../css/navbar.css";
+import "../css/App.css";
+
+
+
+import { NavbarHome } from './components/header';
+import { NavbarBook } from './components/header/book';
+import { NavbarOthers } from './components/header/others';
 
 function App() {
   const main_path = window.location.pathname;
   return (
     <Router>
-      <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/book">BookPage</Link>
-            </li>
-            <li>
-              <Link to="/community">CommunityPage</Link>
-            </li>
-            <li>
-              <Link to="/orders">OrdersPage</Link>
-            </li>
-            <li>
-              <Link to="/member-page">MemberPage</Link>
-            </li>
-            <li>
-              <Link to="/help">HelpPage</Link>
-            </li>
-            <li>
-              <Link to="/login">LoginPage</Link>
-            </li>
-            <li>
-              <Link to="/">HomePage</Link>
-            </li>
-          </ul>
-        </nav> */}
-
+      {main_path === "/" ? (
+        <NavbarHome />
+      ): main_path.includes("book") ? (
+         <NavbarBook/>
+      ) : (
+         <NavbarOthers />
+      )}
         <Switch>
           <Route path="/book">
             <BookPage />
@@ -55,7 +38,7 @@ function App() {
           <Route path="/orders">
             <OrdersPage />
           </Route>
-          <Route path="/member">
+          <Route path="/member-page">
             <MemberPage />
           </Route>
           <Route path="/help">
@@ -68,8 +51,8 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-        {/* <Footer /> */}
-      </div>
+        
+    
     </Router>
   );
 
