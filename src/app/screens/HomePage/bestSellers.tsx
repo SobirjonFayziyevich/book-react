@@ -1,6 +1,10 @@
 import React from "react";
-import {Container} from "@mui/material";
+import { Container } from "@mui/material";
 
 export function BestSellers() {
-    return <Container>BestSellers</Container>;
+  return (
+    <div className="static_frame">
+      <Container>BestSellers</Container>;
+    </div>
+  );
 }

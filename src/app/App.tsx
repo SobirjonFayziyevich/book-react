@@ -10,12 +10,15 @@ import {HomePage} from "./screens/HomePage";
 import {OrdersPage} from "./screens/OrdersPage";
 import "../css/navbar.css";
 import "../css/App.css";
+import "../css/footer.css";
+
 
 
 
 import { NavbarHome } from './components/header';
 import { NavbarBook } from './components/header/book';
 import { NavbarOthers } from './components/header/others';
+import {Footer} from "./components/footer";
 
 function App() {
   const main_path = window.location.pathname;
@@ -51,7 +54,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-        
+        <Footer />
     
     </Router>
   );

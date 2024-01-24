@@ -83,6 +83,7 @@ export function NavbarHome(props: any) {
                             </Button>
                         </Box>
                 </Stack>
+                
             </Container>
         </div>
     );

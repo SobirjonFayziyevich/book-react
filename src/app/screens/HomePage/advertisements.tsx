@@ -3,7 +3,7 @@ import React from "react";
 
 export function Advertisements() {
     return (
-        <div className="ads_restaurant_frame">
+        <div className="ads_book_frame">
             <video
                 className={"ads_video"}
                 autoPlay={true}
@@ -13,9 +13,9 @@ export function Advertisements() {
                 data-video-media=""
             >
               <source
-                  data-src="https://fnb-p-c6e19b1675f4.imgix.net/87994cc2-0b2c-4b4e-a402-45c9834c267e/HP-6s-1920x1080-3_def.mp4?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80"
+                  data-src="https://www.vecteezy.com/video/21964297-man-reading-a-book-in-his-peaceful-home-enjoying-his-free-time-the-carefree-man-resting-on-the-sofa-at-home-reads-a-book-and-does-not-neglect-to-read-in-his-spare-time"
                   type="video/mp4"
-                  src="https://fnb-p-c6e19b1675f4.imgix.net/87994cc2-0b2c-4b4e-a402-45c9834c267e/HP-6s-1920x1080-3_def.mp4?auto=compress%2Cformat&amp;fit=min&amp;fm=jpg&amp;q=80"
+                  src="https://www.vecteezy.com/video/21964297-man-reading-a-book-in-his-peaceful-home-enjoying-his-free-time-the-carefree-man-resting-on-the-sofa-at-home-reads-a-book-and-does-not-neglect-to-read-in-his-spare-time"
               />
             </video>
         </div>
