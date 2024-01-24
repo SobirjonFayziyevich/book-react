@@ -13,10 +13,10 @@ import '../../../css/navbar.css';
 export function HomePage() {
     return <div className="homepage">
         <Home/> 
+        <TopCollections/>
         <Events/> 
         <Statistics/>
-        <TopCollections/>
-        <BestSellers/>
+         <BestSellers/>
         <Advertisements/>
         <Recommendation/>
         <BestBook/>

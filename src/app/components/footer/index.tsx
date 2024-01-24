@@ -6,7 +6,7 @@ export function Footer() {
         <div className="footer_config">
             <Container>
                 <Stack className="main_footer_container">
-                    <Stack flexDirection={"row"} style={{height: "377px"}}>
+                    <Stack flexDirection={"row"} style={{height: "242px"}}>
                         <Stack className="info" flexDirection={"column"}>
                             <Box>
                                 <img src={"/icons/logo.svg"}/>
@@ -45,11 +45,11 @@ export function Footer() {
                             <Box className="divider"></Box>
                             <Stack className="details" sx={{mt: "19px"}}>
                                 <Box className="details_first">L.</Box>
-                                <Box className="details_second">Uzbekistan</Box>
+                                <Box className="details_second">CANADA. Nova Scotia</Box>
                             </Stack>
                             <Stack className="details" sx={{mt: "42px"}}>
                                 <Box className="details_first">P.</Box>
-                                <Box className="details_second">+998 - 99 266 25 62</Box>
+                                <Box className="details_second">+1 902 943 9398</Box>
                             </Stack>
                             <Stack className="details" sx={{mt: "9px"}}>
                                 <Box className="details_first">E.</Box>
