@@ -27,7 +27,7 @@ export function TopCollections() {
             flexDirection={"column"}
             alignItems={"center"}
           >
-            <Box className={"category_title"}>TopCollections</Box>
+            <Box className={"category_title"}>Trending this week</Box>
 
             <Stack sx={{ mt: "43px" }} flexDirection={"row"} m={"16px"}>
               <CssVarsProvider>

@@ -12,7 +12,7 @@ export function NavbarBook(props: any) {
                 justifyContent={"space-between"}
             >
                 <Box>
-                    <img src={"/icons/Papay..svg"}/>
+                    <img src={"/book/banner-1.png.webp"}/>
                 </Box>
                 <Stack
                     flexDirection={"row"}

@@ -15,8 +15,8 @@ export function HomePage() {
         <Home/> 
         <TopCollections/>
         <Statistics/>
-        <Events/> 
         <BestSellers/>
+        <Events/> 
         <Advertisements/>
         <Recommendation/>
         <BestBook/>

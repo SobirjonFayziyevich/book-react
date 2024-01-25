@@ -1,10 +1,13 @@
+import { Box } from "@mui/material";
+import { Container } from "@mui/system";
 import React from "react";
-import { Container } from "@mui/material";
 
 export function BestSellers() {
   return (
-    <div className="static_frame">
-      <Container>BestSellers</Container>;
+    <div className="best_seller_frame">
+      <Container>
+        <Box className="seller_frame_box">BestSellers</Box>
+      </Container>
     </div>
   );
 }
