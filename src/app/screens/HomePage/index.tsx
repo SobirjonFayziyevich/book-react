@@ -14,9 +14,9 @@ export function HomePage() {
     return <div className="homepage">
         <Home/> 
         <TopCollections/>
-        <Events/> 
         <Statistics/>
-         <BestSellers/>
+        <Events/> 
+        <BestSellers/>
         <Advertisements/>
         <Recommendation/>
         <BestBook/>
