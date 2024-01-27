@@ -1,80 +1,349 @@
 .homepage {
-    background: rgba(178, 165, 182, 0.73);
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+  background: rgba(178, 165, 182, 0.73);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
-.homepage .search_home_frame{
-    background: url("/public/book/background.webp"); 
-    width: 100%;
-    height: 800px;
-
+.homepage .search_home_frame {
+  background: url("/public/book/background.webp");
+  width: 100%;
+  height: 800px;
 }
-.homepage .users{
-    width: 100%;
-    color: rgb(11, 10, 10);
-    font-size: 30px;
-    font-family: Poppins;
-    line-height: 90px;
-    word-wrap: break-word
+.homepage .users {
+  width: 100%;
+  /* color: rgb(11, 10, 10); */
+  font-size: 30px;
+  font-family: Poppins;
+  line-height: 90px;
+  word-wrap: break-word;
 }
- /* TopCollection */
+/* TopCollection */
 
 .homepage .topcollection_frame {
-    width: 100%;
-    height: 628px;
-    display: flex;
-    background: #d1d4d7;
-    
+  width: 100%;
+  height: 628px;
+  display: flex;
+  background: #d1d4d7;
 }
 
 .homepage .category_title {
-    font-family: Roboto;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 45px;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+  margin-top: 10px;
 }
 .homepage .top_collection_frame {
-    width: 100%;
-    height: 800px;
-    border-radius: 20px;
-
+  width: 100%;
+  height: 800px;
+  border-radius: 20px;
 }
 /* Statics */
 .homepage {
-    background: #0B0E11;
+  background: #5a6067;
 }
 .homepage .static_frame {
-    width: 100%;
-    background: #e3e0dd;
-    
-
+  width: 100%;
+  background: #ffffff;
 }
 .homepage .static_box .static_info {
-color: #000;
-font-family: Poppins;
-font-size: 22px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 109.091% */
+  color: #000;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 109.091% */
 }
-.homepage .static_box .static_text{
-width: 245px;
-height: 64px;
-flex-shrink: 0;
-color: rgba(0, 0, 0, 0.50);
-font-family: Poppins;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin-top: 15px;
+.homepage .static_box .static_text {
+  width: 245px;
+  height: 64px;
+  flex-shrink: 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 15px;
 }
 
 /* Best Seller */
 
-.homepage .best_seller_frame{
-    width: 100%;
-    height: 419px;
+.homepage .best_seller_frame {
+  width: 100%;
+  height: 460px;
+  background: blanchedalmond;
 }
+.homepage .seller_frame_box {
+  color: #000;
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+/* Top rated Books */
+.homepage .best_book_frame {
+  width: 100%;
+  height: 600px;
+  background: #fcf8fd;
+}
+.homepage .top_book_title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 35px;
+  flex-direction: column;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 15px;
+}
+.homepage .book_box {
+  width: 170px;
+height: 243px;
+flex-direction: row;
+flex-shrink: 0;
+flex-direction: row;
+margin-bottom: 40px;
+}
+
+.homepage .book_price_box{
+  width: 142px;
+  height: 73px;
+  flex-shrink: 0;
+  border-radius: 10px;
+background: #EEDFF3;
+/* margin-bottom: 10px; */
+}
+
+.homepage .book_price {
+  color: #000;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 70px;
+margin-left: 30px;
+}
+
+/* Top rated Books finish */
+
+/*Events SECTION*/
+
+.homepage .events_frame {
+  /* margin-top: 45px; */
+  width: 100%;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
+  background:  #FFF;
+
+}
+
+.homepage .events_main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.homepage .events_main .events_text {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage .events_main .prev_next_frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 24px;
+  margin-left: 901px;
+  margin-top: 19px;
+}
+
+.homepage .dot_frame_pagination {
+  position: relative;
+  width: auto;
+  display: flex;
+}
+
+.homepage .events_main .events_info {
+  margin-top: 75px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage .events_info .events_info_frame {
+  position: relative;
+  width: 579px;
+  height: 447px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage .events_img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.homepage .events_desc {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  width: 90%;
+  height: auto;
+  bottom: 5px;
+  background: #FFFFFF;
+  box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+  border-radius: 8px;
+}
+
+.homepage .events_desc .events_bott {
+  width: 97%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage .events_desc .events_bott .bott_left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage .bott_left .event_title_speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage  .event_title_speaker .event_organizator {
+  display: flex;
+  align-items: center;
+}
+.homepage .event_organizator .spec_text_author {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  line-height: 34px;
+  color: #140342;
+}
+
+.homepage .bott_left .text_desc {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  color: #4f547b;
+}
+
+.homepage .bott_info .bott_info_main {
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f547b;
+}
+
+.homepage .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage .swiper-pagination-bullet {
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  opacity: 1;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.homepage .swiper-pagination-bullet-active {
+  background: #007aff;
+  border-radius: 50%;
+} 
+
+.homepage .bott_left .event_title_speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage  .event_title_speaker .event_organizator {
+  display: flex;
+  align-items: center;
+}
+.homepage .event_organizator .spec_text_author {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  line-height: 34px;
+  color: #140342;
+}
+
+.homepage .bott_left .text_desc {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+  color: #4f547b;
+}
+
+.homepage .bott_info .bott_info_main {
+  margin-left: 10px;
+  display: inline-block;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: auto;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f547b;
+}
+
+.homepage .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage .swiper-pagination-bullet {
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  opacity: 1;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.homepage .swiper-pagination-bullet-active {
+  background: #007aff;
+  border-radius: 50%;
+} 

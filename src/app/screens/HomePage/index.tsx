@@ -16,9 +16,9 @@ export function HomePage() {
         <TopCollections/>
         <Statistics/>
         <BestSellers/>
+        <BestBook/>
         <Events/> 
         <Advertisements/>
         <Recommendation/>
-        <BestBook/>
     </div>;
 }

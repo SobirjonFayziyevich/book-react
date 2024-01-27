@@ -14,7 +14,7 @@ export function NavbarHome(props: any) {
                     justifyContent={"space-between"}
                 >
                     <Box className="header_logo">
-                        <img src={"/icons/logo.svg"}/>
+                        {/* <img src={"/icons/logo.svg"}/> */}
                     </Box>
                     <Stack
                         flexDirection={"row"}
