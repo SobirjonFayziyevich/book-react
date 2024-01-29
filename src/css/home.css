@@ -347,3 +347,101 @@ margin-left: 30px;
   background: #007aff;
   border-radius: 50%;
 } 
+
+/* Recomendation */
+
+.homepage .recomend_frame{
+width: 100%;
+height: 921px;
+flex-shrink: 0;
+background: #FFF;
+margin-bottom: 40px;
+padding: 50px 100px 50px 100px
+}
+
+.homepage .recomendation_top h1{
+  color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 25px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; /* 85.714% */
+margin-bottom: 1px;
+}
+.homepage .recomendation_top p{
+  margin-bottom: 1px;
+  width: 584px;
+height: 53px;
+align-items: center;
+justify-content: center;
+margin-left: 350px;
+flex-shrink: 0;
+color: rgba(0, 0, 0, 0.60);
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 30px;
+}
+.homepage .recom_middle_box{
+ display: flex;
+ justify-content: space-between;
+ position: relative;
+}
+
+.homepage .img_box img {
+  margin-top: 60px;
+width: 372px;
+height: 210px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #C4C4C4;
+margin-bottom: 1px;
+}
+
+.homepage .book_def h4{
+width: 343px;
+color: #000;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 177.778% */
+margin-bottom: 1px;
+margin-top: 15px;
+}
+.homepage .book_def p {
+  width: 372px;
+height: 70px;
+flex-shrink: 0;
+color: rgba(0, 0, 0, 0.50);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-bottom: 10px;
+}
+.homepage .author_book img {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  margin-bottom: 1px;
+  
+}
+.homepage .author_book p {
+  color: #3D3D3D;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+flex-direction: row;
+} 
+
+
+
+
