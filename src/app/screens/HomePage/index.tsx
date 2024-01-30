@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Statistics} from "./statistics";
 import {TopCollections} from "./topCollections";
 import {BestSellers} from "./bestSellers";
@@ -12,6 +12,12 @@ import '../../../css/home.css';
 import '../../../css/navbar.css';
 
 export function HomePage() {
+
+    useEffect(() => {
+
+    }, [])
+
+
     return <div className="homepage">
         <Home/> 
         <TopCollections/>
