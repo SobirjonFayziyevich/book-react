@@ -137,11 +137,11 @@ export function BestSellers() {
             justifyContent={"flex-end"}
             style={{
               width: "100%",
-              marginBottom: "66px",
+              marginBottom: "16px",
             }}
           >
             <Button
-              style={{ background: "#1976d2", color: "#ffffff" }}
+              style={{ background: "#1976d2", color: "#ffffff"}}
             >
               See All
             </Button>

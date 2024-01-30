@@ -28,7 +28,7 @@ export function Recommendation() {
               </Box>
               <Box className="author_book">
                 <Box>
-                  <img src="/icons/odamcha.png"></img>
+                  <img src="/icons/person2.jpg"></img>
                   <p>James Wong</p>
                 </Box>
               </Box>
@@ -47,7 +47,7 @@ export function Recommendation() {
               </Box>
               <Box className="author_book">
                 <Box>
-                  <img src="/icons/odamcha.png"></img>
+                  <img src="/icons/person2.jpg"></img>
                   <p>James Wong</p>
                 </Box>
               </Box>
@@ -66,7 +66,7 @@ export function Recommendation() {
               </Box>
               <Box className="author_book">
                 <Box>
-                  <img src="/icons/odamcha.png"></img>
+                  <img src="/icons/person2.jpg"></img>
                   <p>James Wong</p>
                 </Box>
               </Box>

@@ -4,6 +4,7 @@ import {TopCollections} from "./topCollections";
 import {BestSellers} from "./bestSellers";
 import {Recommendation} from "./recommendation";
 import {Advertisements} from "./advertisements";
+import {Comment} from "./comment";
 import {BestBook} from "./bestBook";
 import {Home} from "./home";
 import {Events} from "./events";
@@ -20,5 +21,6 @@ export function HomePage() {
         <Events/> 
         <Advertisements/>
         <Recommendation/>
+        <Comment/>
     </div>;
 }

@@ -73,7 +73,7 @@
 .homepage .best_seller_frame {
   width: 100%;
   height: 460px;
-  background: blanchedalmond;
+  background: rgb(237, 235, 232);
 }
 .homepage .seller_frame_box {
   color: #000;
@@ -352,7 +352,7 @@ margin-left: 30px;
 
 .homepage .recomend_frame{
 width: 100%;
-height: 921px;
+height: 852px;
 flex-shrink: 0;
 background: #FFF;
 margin-bottom: 40px;
@@ -363,15 +363,15 @@ padding: 50px 100px 50px 100px
   color: #000;
 text-align: center;
 font-family: Poppins;
-font-size: 25px;
+font-size: 35px;
 font-style: normal;
 font-weight: 600;
 line-height: 30px; /* 85.714% */
 margin-bottom: 1px;
 }
 .homepage .recomendation_top p{
-  margin-bottom: 1px;
-  width: 584px;
+margin-bottom: 1px;
+width: 584px;
 height: 53px;
 align-items: center;
 justify-content: center;
@@ -440,8 +440,109 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 flex-direction: row;
+padding: 0px 34px 0px 6px;
 } 
 
+
+/* Comment */
+.homepage .comment_frame{
+  width: 100%;
+  height: 729px;
+  flex-shrink: 0;
+  background-color:white;
+  margin-bottom: 100px;
+}
+.homepage .comment_frame_box{
+color: #000;
+margin-bottom: 40px;
+text-align: center;
+font-family: Poppins;
+font-size: 35px;
+font-style: normal;
+font-weight: 600;
+line-height: 30px; /* 85.714% */
+}
+
+.homepage .comment_frame_box p{
+width: 584px;
+height: 53px;
+flex-shrink: 0;
+color: rgba(0, 0, 0, 0.60);
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.homepage .comment_middle_box{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.homepage .comment_main_box{
+  width: 428px;
+height: 269px;
+flex-shrink: 0;
+border-radius: 10px;
+background: #FFF;
+
+/* shadow01 */
+box-shadow: 0px 7px 20px 0px rgba(141, 40, 173, 0.15);
+}
+.homepage .comment_main_box .comment_img{
+  width: 196px;
+  height: 25px;
+  flex-shrink: 0;
+  padding: 30px 202px 21px 30px;
+}
+.homepage .text_def{
+  width: 380px;
+  height: 70px;
+  flex-shrink: 0; 
+  color: #000;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 5px 18px 114px 30px;
+}
+.homepage .text_def p {
+height: 27px;
+width: 110px;
+flex-direction: row;
+color: #3D3D3D;
+font-family: Poppins;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding: 15px 188px 57px 5px;
+}
+.homepage .author_book img {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  margin-left: 280px;
+  border-radius: 10px;
+background: #FFF;
+
+/* shadow01 */
+box-shadow: 0px 7px 20px 0px rgba(141, 40, 173, 0.15);
+
+}
+.homepage .comment_pagination{
+  width: 24px;
+height: 24px;
+flex-shrink: 0;
+fill: #FFF;
+filter: drop-shadow(0px 7px 20px rgba(141, 40, 173, 0.15));
+
+
+}
 
 
 
