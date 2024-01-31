@@ -13,15 +13,6 @@ export function Home() {
                         </Box>
                   </Stack>
                   </Stack>
-                    
-                    {/* <Box className="collection_botton">
-                        <Button 
-                        style={{ background: "#1976d2", color: "#ffffff", marginTop: "36px"}}
-                        >
-                            Go to Collections
-                        </Button>
-                    </Box>
-                 */}
             </Container>
         </div>
     );

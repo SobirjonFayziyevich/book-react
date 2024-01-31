@@ -1,14 +1,10 @@
 import React from "react";
-import { Box, Button, Container, Stack } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import { CssVarsProvider } from "@mui/joy/styles";
 import Card from "@mui/joy/Card";
 import {
-  AspectRatio,
-  Avatar,
   CardOverflow,
-  Chip,
   IconButton,
-  Link,
 } from "@mui/joy";
 import CardContent from "@mui/joy/CardContent";
 import CardCover from "@mui/joy/CardCover";

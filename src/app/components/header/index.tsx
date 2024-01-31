@@ -14,7 +14,7 @@ export function NavbarHome(props: any) {
                     justifyContent={"space-between"}
                 >
                     <Box className="header_logo">
-                        {/* <img src={"/icons/logo.svg"}/> */}
+                        <img src={"/icons/logo.svg"}/>
                     </Box>
                     <Stack
                         flexDirection={"row"}
@@ -29,12 +29,12 @@ export function NavbarHome(props: any) {
                         </Box>
                         <Box className="hover-line" onClick={props.setPath}>
                             <NavLink to="/book" activeClassName="uderline">
-                                Books
+                                BookStore
                             </NavLink>
                         </Box>
                         <Box className="hover-line" onClick={props.setPath}>
                             <NavLink to="/orders" activeClassName="uderline">
-                                Magazine
+                                Order
                             </NavLink>
                         </Box>
                         <Box className="hover-line" onClick={props.setPath}>
@@ -61,17 +61,6 @@ export function NavbarHome(props: any) {
                         >
                             <Badge badgeContent={3} color="secondary">
                                 <img src={"/icons/basket.png"}/>
-                            </Badge>
-                        </IconButton>
-                        <IconButton
-                            aria-label="cart"
-                            id="basic-button"
-                            aria-controls={undefined}
-                            aria-haspopup="true"
-                            aria-expanded={undefined}
-                        >
-                            <Badge badgeContent={3} color="secondary">
-                                <img src={"/icons/odamcha.png"}/>
                             </Badge>
                         </IconButton>
                     </Box>

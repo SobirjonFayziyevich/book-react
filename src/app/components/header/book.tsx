@@ -4,7 +4,8 @@ import {NavLink} from "react-router-dom";
 import Badge from "@mui/material/Badge";
 
 export function NavbarBook(props: any) {
-    return <div className="format_book home_navbar">
+    return (
+    <div className="format_book">
         <Container>
             <Stack
                 flexDirection={"row"}
@@ -12,7 +13,7 @@ export function NavbarBook(props: any) {
                 justifyContent={"space-between"}
             >
                 <Box>
-                    <img src={"/book/banner-1.png.webp"}/>
+                    <img src={"/icons/logo.svg"}/>
                 </Box>
                 <Stack
                     flexDirection={"row"}
@@ -22,17 +23,17 @@ export function NavbarBook(props: any) {
                 >
                     <Box className="hover-line" onClick={props.setPath}>
                         <NavLink to="/" activeClassName="uderline">
-                            Main
+                            Home
                         </NavLink>
                     </Box>
                     <Box className="hover-line" onClick={props.setPath}>
                         <NavLink to="/book" activeClassName="uderline">
-                            Property
+                            BookStore
                         </NavLink>
                     </Box>
                     <Box className="hover-line" onClick={props.setPath}>
                         <NavLink to="/orders">
-                            Search
+                            Order
                         </NavLink>
                     </Box>
                     <Box className="hover-line" onClick={props.setPath}>
@@ -55,7 +56,7 @@ export function NavbarBook(props: any) {
                             aria-expanded={undefined}
                         >
                             <Badge badgeContent={3} color="secondary">
-                                <img src={"/icons/shopping-cart.svg"}/>
+                                <img src={"/icons/basket.png"}/>
                             </Badge>
                         </IconButton>
                     </Box>
@@ -69,7 +70,7 @@ export function NavbarBook(props: any) {
                     </Box>
                 </Stack>
             </Stack>
-            {/*main stack qismi*/}
         </Container>
-    </div>;
+    </div>
+    );
 }
