@@ -1,0 +1,186 @@
+
+ .book_page {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: #0b0e11;
+}
+
+.book_page .all_book .fil_search_box {
+    width: 280px;
+    height: 550px;
+    margin-top: 300px;
+    margin-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color:rgb(60, 58, 55);
+
+}
+.book_page .all_book .fil_box_name{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: blanchedalmond;
+
+}
+.book_page .all_book .price_range{
+    font-size: x-large;
+    margin-bottom: 60px;
+    color: blanchedalmond;
+}
+
+.book_page .all_book .fil_box a {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    flex-direction: row;
+    line-height: 25px;
+    align-items: center;
+    justify-content: space-between;
+    color: #ab9595;
+}
+
+.book_page .all_book .fil_box a  {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+
+.book_page .all_book .fil_box a ::before,
+.fil_box a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.book_page .all_book .fil_box a ::before {
+    background-color: #d7b686;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.book_page .all_book .fil_box a ::after {
+    content: attr(data_replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #d7b686;
+}
+
+.book_page .all_book .fil_box a :hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+.book_page .all_book .fil_box a :hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.book_page .all_book .fil_box a  span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.book_page .all_book .fil_box a :hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+.book_page .all_book .fil_box a  {
+    text-decoration: none;
+    color: #cbc1c1;
+    font-weight: 700;
+    vertical-align: top;
+}
+
+.book_page .all_book .search_big_box {
+    position: relative;
+    width: 270px;
+    height: 38px;
+    display: flex;
+    margin-bottom: 80px;
+    align-items: center;
+    background: #fffcfc;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(213, 213, 213, 0.25);
+    border-radius: 18.5px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    /* margin-left: 850px; */
+}
+
+.book_page .all_book .search_form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book_page .all_book .searchInput {
+    position: relative;
+    width: 245px;
+    height: 29px;
+    margin-left: 10px;
+
+    display: flex;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    font-family: "GT Walsheim Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #4f547b;
+}
+
+.book_page .all_book .button_search {
+    position: relative;
+    width: 120px;
+    height: 33px;
+    display: flex;
+
+    border-radius: 18.5px;
+    background: #f8be69;
+}
+
+.book_page .all_book .all_book_box {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-bottom: 400px;
+    /* display: flex; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+}
+
+.book_page .all_book .book_title_text {
+    font-family: "GT Walsheim Pro";
+    font-weight: 400;
+    font-size: 17px;
+    font-style: normal;
+    position: relative;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #140342;
+}
+
+.book_page .all_book .book_des_text {
+    margin-top: 6px;
+    font-family: "?????";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color: #4f547b;
+}

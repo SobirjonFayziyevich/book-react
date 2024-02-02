@@ -9,12 +9,12 @@ export function NavbarHome(props: any) {
         <div className="format home_navbar">
             <Container>
                 <Stack
-                    flexDirection={"row"}
                     className="navbar_config"
+                    flexDirection={"row"}
                     justifyContent={"space-between"}
                 >
                     <Box className="header_logo">
-                        <img src={"/icons/logo.svg"}/>
+                        <img src={"/icons/"}/>
                     </Box>
                     <Stack
                         flexDirection={"row"}

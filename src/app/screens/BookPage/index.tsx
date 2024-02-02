@@ -4,6 +4,7 @@ import { Route, Switch, useRouteMatch } from "react-router-dom";
 import { OneBook } from "./oneBook";
 import { ChosenBook } from "./chosenBook";
 import { AllBooks } from "./allBooks";
+import "../../../css/book.css";
 
 export function BookPage() {
   let book = useRouteMatch();
@@ -15,10 +16,10 @@ export function BookPage() {
           <ChosenBook/>
         </Route>
         <Route path={`${book.path}/:book_id`}>
-          <OneBook />{" "}
+          <OneBook />
         </Route>
         <Route path={`${book.path}`}>
-          <AllBooks />{" "}
+          <AllBooks />
         </Route>
       </Switch>
     </div>
