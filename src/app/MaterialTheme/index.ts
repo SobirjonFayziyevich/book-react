@@ -21,7 +21,8 @@ const light = {
             main: "#1976d2",
         },
         secondary: {      // pagedagi new, price, likes, views larni rangini uzgartirib beradi.
-            main: "#c40909", 
+            // main: "#c40909",
+            main: "#FF7A00;",  
         },
         text: {
             primary: "#172b4d",

@@ -1,186 +1,331 @@
-
- .book_page {
-    position: relative;
-    width: 100%;
-    height: auto;
-    background: #0b0e11;
+.book_page {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #a4a5a7;
 }
 
 .book_page .all_book .fil_search_box {
-    width: 280px;
-    height: 550px;
-    margin-top: 300px;
-    margin-right: 18px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color:rgb(60, 58, 55);
-
+  width: 280px;
+  height: 550px;
+  margin-top: 300px;
+  margin-right: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: rgb(232, 232, 232);
 }
-.book_page .all_book .fil_box_name{
-    width: auto;
-    height: auto;
-    font-size: 30px;
-    margin-bottom: 15px;
-    color: blanchedalmond;
-
+.book_page .all_book .fil_box_name {
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: rgb(23, 22, 22);
 }
-.book_page .all_book .price_range{
-    font-size: x-large;
-    margin-bottom: 60px;
-    color: blanchedalmond;
+.book_page .all_book .price_range {
+  font-size: x-large;
+  margin-bottom: 60px;
+  color: rgb(16, 15, 15);
 }
 
 .book_page .all_book .fil_box a {
-    width: 200px;
-    height: 45px;
-    display: flex;
-    font-size: 20px;
-    font-weight: 400;
-    flex-direction: row;
-    line-height: 25px;
-    align-items: center;
-    justify-content: space-between;
-    color: #ab9595;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  font-size: 20px;
+  font-weight: 400;
+  flex-direction: row;
+  line-height: 25px;
+  align-items: center;
+  justify-content: space-between;
+  color: #ab9595;
 }
 
-.book_page .all_book .fil_box a  {
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
+.book_page .all_book .fil_box a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
 }
 
 .book_page .all_book .fil_box a ::before,
 .fil_box a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .book_page .all_book .fil_box a ::before {
-    background-color: #d7b686;
-    height: 2px;
-    bottom: 0;
-    transform-origin: 100% 50%;
-    transform: scaleX(0);
-    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  background-color: #d7b686;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .book_page .all_book .fil_box a ::after {
-    content: attr(data_replace);
-    height: 100%;
-    top: 0;
-    transform-origin: 100% 50%;
-    transform: translate3d(200%, 0, 0);
-    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
-    color: #d7b686;
+  content: attr(data_replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #d7b686;
 }
 
 .book_page .all_book .fil_box a :hover::before {
-    transform-origin: 0% 50%;
-    transform: scaleX(1);
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
 }
 
 .book_page .all_book .fil_box a :hover::after {
-    transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
-.book_page .all_book .fil_box a  span {
-    display: inline-block;
-    transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+.book_page .all_book .fil_box a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
 .book_page .all_book .fil_box a :hover span {
-    transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
 }
 
-.book_page .all_book .fil_box a  {
-    text-decoration: none;
-    color: #cbc1c1;
-    font-weight: 700;
-    vertical-align: top;
+.book_page .all_book .fil_box a {
+  text-decoration: none;
+  color: #cbc1c1;
+  font-weight: 700;
+  vertical-align: top;
 }
 
 .book_page .all_book .search_big_box {
-    position: relative;
-    width: 270px;
-    height: 38px;
-    display: flex;
-    margin-bottom: 80px;
-    align-items: center;
-    background: #fffcfc;
-    border: 1px solid #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(213, 213, 213, 0.25);
-    border-radius: 18.5px;
-    box-sizing: border-box;
-    margin-bottom: 50px;
-    /* margin-left: 850px; */
+  position: relative;
+  width: 270px;
+  height: 38px;
+  display: flex;
+  margin-bottom: 80px;
+  align-items: center;
+  background: #fffcfc;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(213, 213, 213, 0.25);
+  border-radius: 18.5px;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  /* margin-left: 850px; */
 }
 
 .book_page .all_book .search_form {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .book_page .all_book .searchInput {
-    position: relative;
-    width: 245px;
-    height: 29px;
-    margin-left: 10px;
+  position: relative;
+  width: 245px;
+  height: 29px;
+  margin-left: 10px;
 
-    display: flex;
-    border: none;
-    border-radius: 10px 0px 0px 10px;
-    font-family: "GT Walsheim Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 26px;
-    color: #4f547b;
+  display: flex;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: #4f547b;
 }
 
 .book_page .all_book .button_search {
-    position: relative;
-    width: 120px;
-    height: 33px;
-    display: flex;
+  position: relative;
+  width: 120px;
+  height: 33px;
+  display: flex;
 
-    border-radius: 18.5px;
-    background: #f8be69;
+  border-radius: 18.5px;
+  background: #f8be69;
 }
 
 .book_page .all_book .all_book_box {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin-bottom: 400px;
-    /* display: flex; */
-    flex-direction: row;
-    /* flex-wrap: wrap; */
+  position: relative;
+  width: 1305px;
+  height: auto;
+  /* margin-bottom: 400px; */
+  display: flex;
+  margin-top: 70px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.book_page .all_book .book_box {
+  margin: 13px;
+  padding: 5px;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 1px solid #ededed;
+  border-radius: 8px;
 }
 
 .book_page .all_book .book_title_text {
-    font-family: "GT Walsheim Pro";
-    font-weight: 400;
-    font-size: 17px;
-    font-style: normal;
-    position: relative;
-    line-height: 26px;
-    text-transform: capitalize;
-    color: #140342;
+  font-family: "GT Walsheim Pro";
+  font-weight: 400;
+  font-size: 17px;
+  font-style: normal;
+  position: relative;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: #140342;
 }
 
 .book_page .all_book .book_des_text {
-    margin-top: 6px;
-    font-family: "?????";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    color: #4f547b;
+  margin-top: 6px;
+  font-family: "?????";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #4f547b;
 }
+.book_page .all_book_box .our_service a {
+  color: #8d28ad;
+  font-family: Poppins;
+  width: 93px;
+  height: 75px;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.book_page .all_book_box .our_service b {
+  color: #755a7d;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* SINGLE_PAGE */
+.book_page .single_page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background: #380b46;
+}
+
+.book_page .single_page{
+  display: flex;
+  width: 100%;
+  height: auto;
+  background: #380b46;
+}
+.book_page .single_page .top_text{
+  position: relative;
+  width: 100%;
+  height: 43px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.book_page .single_page .top_text p {
+  position: relative;
+  margin-left: 310px;
+
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #f9f9f9;
+  padding: 0px 15px;
+}
+.book_page .single_page .Single_search_big_box {
+  position: relative;
+  width: 360px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  background: #fffcfc;
+  /* border: 1px solid #ffffff; */
+  box-shadow: 0px 4px 4px rgba(213, 213, 213, 0.25);
+  border-radius: 18.5px;
+  box-sizing: border-box;
+}
+
+.book_page .single_page  .Single_search_form{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book_page .single_page .Single_searchInput {
+  position: relative;
+  width: 245px;
+  height: 29px;
+  margin-left: 10px;
+  display: flex;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: #4f547b;
+}
+
+.book_page .single_page  .Single_button_search {
+  position: relative;
+  width: 100px;
+  height: 33px;
+  display: flex;
+  border-radius: 18.5px;
+  background: #f8be69;
+}
+
+
+.book_page .single_page .static_info {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.book_page .single_page .static_text {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px;
+}
+.single_page .dishs_filter_box {
+  width: 37%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+
+

@@ -37,10 +37,6 @@
 .homepage {
   background: #5a6067;
 }
-.homepage .static_frame {
-  width: 100%;
-  background: #ffffff;
-}
 .homepage .static_box .static_info {
   color: #000;
   font-family: Poppins;
