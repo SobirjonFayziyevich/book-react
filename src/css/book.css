@@ -223,13 +223,13 @@
   background: #380b46;
 }
 
-.book_page .single_page{
+.book_page .single_page {
   display: flex;
   width: 100%;
   height: auto;
   background: #380b46;
 }
-.book_page .single_page .top_text{
+.book_page .single_page .top_text {
   position: relative;
   width: 100%;
   height: 43px;
@@ -265,7 +265,7 @@
   box-sizing: border-box;
 }
 
-.book_page .single_page  .Single_search_form{
+.book_page .single_page .Single_search_form {
   position: relative;
   width: 100%;
   display: flex;
@@ -290,7 +290,7 @@
   color: #4f547b;
 }
 
-.book_page .single_page  .Single_button_search {
+.book_page .single_page .Single_button_search {
   position: relative;
   width: 100px;
   height: 33px;
@@ -299,7 +299,6 @@
   background: #f8be69;
 }
 
-
 .book_page .single_page .static_info {
   color: #fff;
   font-family: Poppins;
@@ -307,6 +306,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  background-image: url("");
 }
 .book_page .single_page .static_text {
   color: rgba(255, 255, 255, 0.6);
@@ -325,7 +325,326 @@
   justify-content: space-between;
 }
 
+.single_page .bok_box_wrapper {
+  width: 942px;
+  height: 486px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fafafa;
+}
+.single_page .bok_box_wrapper .bok_box {
+  width: 270px;
+  height: 386px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #3f3d3d;
+  margin-top: 50px;
+}
+
+.single_page .bok_box_wrapper .book_type {
+  width: 131px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(141, 40, 173, 0.15);
+}
+.single_page .bok_box_wrapper .book_type a {
+  color: #8d28ad;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.book_page .single_page .main_box {
+  width: 100%;
+  height: 572px;
+  background-color: gainsboro;
+  margin-top: 20px;
+  display: flex;
+}
+.book_page .single_page .category_title {
+  width: 100px;
+  height: 469px;
+  margin-right: 650px;
+}
+.book_page .single_page .category_title a {
+  width: 533px;
+  color: #000;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 100% */
+}
+.book_page .single_page .category_title p {
+  width: 533px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 185.714% */
+}
+.book_page .single_page .category_title_price {
+  color: #8d28ad;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 580;
+  line-height: normal;
+}
+.book_page .single_page .add_box {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100px;
+}
+.book_page .single_page .add_number {
+  width: 183px;
+  height: 65px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #ebebeb;
+}
+.book_page .single_page .add_number .icons {
+  width: 19px;
+  height: 4px;
+  flex-shrink: 0;
+  color: #000;
+  margin-left: 47px;
+  margin-top: 26px;
+  align-items: center;
+}
+
+.book_page .single_page .add_number .number_one {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 109.091% */
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.book_page .single_page .add_number .icons_pls {
+  width: 20px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #000;
+  margin-left: 7px;
+  margin-top: 30px;
+  align-items: center;
+}
+.book_page .single_page .add_button {
+  width: 190px;
+  height: 65px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #8d28ad;
+  margin-left: 20px;
+}
+.book_page .single_page .add_button .bought {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 109.091% */
+  margin-left: 20px;
+}
+
+.book_page .single_page .add_box .yurakcha {
+  width: 76px;
+  height: 65px;
+  flex-shrink: 0;
+  margin-left: 22px;
+  background-color:rgb(216, 230, 187) ;
+}
+.main_box .big_box {
+  width: 380px;
+  height: 500px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #c4c4c4;
+  margin-left: 100px;
+}
+.book_page .single_page .dish-wrapper {
+  margin-right: 50px;
+  width: 100%;
+  height: auto;
+  
+
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+
+}
+.book_page .single_page .dish_box {
 
 
+  width: 273px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book_page .single_page .dish_box .dish_img {
+  position: relative;
+  width: 273px;
+  height: 275px;
+  background-size: cover;
+  border-radius: 0px 50px 0px 0px;
+}
+.book_page .single_page .dish_img .dish_sale {
+  margin-top: 43px;
+  width: 84px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d1f4d9;
+  box-shadow: 4px 6px 20px rgba(0 0 0 / 10%);
+  border-radius: 0px 50px 50px 0px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  background: #ff7a00;
+}
+.book_page .single_page .dish_box .dish_desc {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.book_page .single_page .dish_box .dish_desc .dish_title_text {
+  margin-top: 18px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #120f0f;
+}
+.book_page .single_page .dish_box .dish_desc .dish_desc_text {
+  margin-top: 15px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #faa82b;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.book_page .single_page .dish_box .dish_img:before {
+  border-radius: 0px 50px 0px 0px;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+.book_page .single_page .dish_box .dish_img:hover:before{
+  border-radius: 0px 50px 0px 0px;
+  opacity: 1;
+background-image: url("https://img.freepik.com/premium-vector/reading-pile-books-happy-students-sit-big-book-stack-read-learn-books-festival-poster-bookstore-library-vector-concept-illustration-training-studying-pile-book-literature_102902-3776.jpg?size=626&ext=jpg&uid=R135263787&ga=GA1.1.1465075339.1705997785&semt=ais");
+}
+.book_page .single_book .dish_img img{
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  z-index: 1;
+}
+.book_page .single_page .view_btn {
+  position: absolute;
+  padding: 20px;
+  top: 217px;
+  width: 64px;
+  height: 46px;
+  left: 105px;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgba(198 0 255 / 66%);
+  border: 2px solid #d7b686;
+  border-radius: 10px;
 
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+
+  color: #ffffff;
+}
+.book_page .single_page .dish_img:hover .view_btn {
+  opacity: 1;
+}
+.book_page .single_page .like_view_btn {
+  position: absolute;
+  top: 223px;
+  padding: 5px;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+}
+.book_page .single_page .dish_img:hover .like_view_btn {
+  opacity: 1;
+}
+.book_page .single_page .member_reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 60px;
+}
+
+.book_page .single_page .review_for_restaurant {
+  margin-top: 60px;
+  height: 630px;
+  width: 100%;
+  display: flex;
+  background-color: #0d1518;
+
+}
+
+.book_page .single_page.category_title {
+  color: #E3C08D;
+  font-family: "Dancing Script";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+}

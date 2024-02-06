@@ -1,0 +1,22 @@
+<svg width="19" height="4" viewBox="0 0 19 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="19" height="4" fill="#E5E5E5"/>
+<g id="08_BooksDetail_Description" clip-path="url(#clip0_0_1)">
+<rect width="1920" height="4282" transform="translate(-148 -857)" fill="white"/>
+<rect id="pageBackground" x="-168" y="-855" width="1920" height="3736" fill="white"/>
+<g id="CONTENT">
+<g id="productMain">
+<g id="texts">
+<g id="btnBuy">
+<rect id="background" x="-18" y="-30" width="183" height="65" rx="10" fill="#EBEBEB"/>
+<path id="-" d="M0 1C0 0.447715 0.447715 0 1 0H18C18.5523 0 19 0.447715 19 1V3C19 3.55228 18.5523 4 18 4H1C0.447715 4 0 3.55228 0 3V1Z" fill="#8D28AD"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1920" height="4282" fill="white" transform="translate(-148 -857)"/>
+</clipPath>
+</defs>
+</svg>
