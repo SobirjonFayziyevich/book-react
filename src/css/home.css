@@ -5,11 +5,6 @@
   background-size: cover;
   background: url("/public/book/background-home.webp");
 }
-/* .homepage .search_home_frame {
-  background: url("/public/book/background-home.webp");
-  width: 100%;
-  height: 800px;
-} */
 
 /* TopCollection */
 
@@ -17,7 +12,7 @@
   width: 100%;
   height: 628px;
   display: flex;
-  background: #d1d4d7;
+  background: #ffffff;
 }
 
 .homepage .category_title {
@@ -26,7 +21,18 @@
   font-style: normal;
   font-weight: 700;
   line-height: 45px;
-  margin-top: 10px;
+  margin-top: 5px;
+}
+.homepage .category_title .message {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.homepage .category_title .message_text{
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1.5;
 }
 .homepage .top_collection_frame {
   width: 100%;
@@ -35,7 +41,7 @@
 }
 /* Statics */
 .homepage {
-  background: #5a6067;
+  background: #ffffff;
 }
 .homepage .static_box .static_info {
   color: #000;
@@ -62,7 +68,7 @@
 
 .homepage .best_seller_frame {
   width: 100%;
-  height: 460px;
+  height: 480px;
   background: rgb(237, 235, 232);
 }
 .homepage .seller_frame_box {
@@ -338,11 +344,32 @@ margin-left: 30px;
   border-radius: 50%;
 } 
 
+   /*VIDEO SECTION*/
+
+   .homepage .ads_restaurant_frame {
+    width: 100%;
+    height: 693px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px -62px 60px 20px rgba(217 217 217 / 40%);
+    margin-top: 186px;
+    background-color: #956dd3;
+}
+
+.homepage .ads_video {
+    width: 100%;
+    background: #0c0e12;
+    display: flex;
+    box-shadow: 0px -8px 90px rgba(215 215 255);
+    transform: scale(1.5);
+    overflow: hidden;
+}
+
 /* Recomendation */
 
 .homepage .recomend_frame{
 width: 100%;
-height: 852px;
+height: 720px;
 flex-shrink: 0;
 background: #FFF;
 padding: 50px 100px 50px 100px
@@ -355,9 +382,9 @@ font-family: Poppins;
 font-size: 35px;
 font-style: normal;
 font-weight: 600;
-line-height: 30px; /* 85.714% */
-margin-bottom: 1px;
-}
+ line-height: 30px; 
+ margin-bottom: 1px;
+} 
 .homepage .recomendation_top p{
 margin-bottom: 1px;
 width: 584px;

@@ -1,7 +1,5 @@
 import { Box, Container, Stack } from "@mui/system";
 import React from "react";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Badge, Button, Checkbox } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
@@ -10,6 +8,7 @@ import { FavoriteBorder } from "@mui/icons-material";
 import Favorite from "@mui/icons-material/Favorite";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+
 
 const book_list = Array.from(Array(3).keys());
 const product_list = Array.from(Array(1).keys());
@@ -42,12 +41,141 @@ export function OneBook() {
             </Box>
           </Stack>
 
+          
           <Stack
+            style={{ width: "100%",
+             display: "flex", 
+             minHeight: "800px", 
+            flexDirection: "row",
+            background: "#380b46;" }}
+          >
+            <Box className={"book_category_box"}>
+              <div className={"book_category_main"}>
+                <Button variant={"contained"} color="secondary">
+                  Others
+                </Button>
+                <Button variant={"contained"} color="secondary">
+                  Threller
+                </Button>
+                <Button variant={"contained"} color="secondary">
+                  History
+                </Button>
+                <Button variant={"contained"} color="secondary">
+                  Biography
+                </Button>
+                <Button variant={"contained"} color="secondary">
+                  Children
+                </Button>
+                <Button variant={"contained"} color="secondary">
+                  Poetry
+                </Button>
+              </div>
+            </Box>
+            <Stack className={"book_type"}>
+              <Box className={"type_box"}>
+                <span className={"cart_img"}>
+                  
+                  <img src={"/book/harrypotter.jpeg"} />
+                  
+                  </span>
+                  <div className="cart_desc">
+                    <h4 className="cart_name">Threller</h4>
+                  </div>
+                  <Box>
+                  <div className="price_box">
+                  <div className="price_wrapp">
+                    <p className="sale_price">
+                      "W"
+                      "21000"
+                      </p>
+                    <p className="no_sale_price">
+                      "W"
+                      "25000"
+                    </p>
+                  </div>
+                  <div className="savat">
+                    <img src="/icons/cart.svg" />
+                  </div>
+                  </div>
+                  <div className="sold_out">Sold out</div>
+                  <div className="cart_bottom">
+                    <img src="/icons/stars.svg" />
+                  </div>
+                  </Box>
+              </Box>
+            </Stack>
+            <Stack className={"book_type"}>
+              <Box className={"type_box"}>
+                <span className={"cart_img"}>
+                  <img src={"/book/harrypotter.jpeg"} />
+                  
+                  </span>
+                  <div className="cart_desc">
+                    <h4 className="cart_name">Poetry</h4>
+                  </div>
+                  <Box>
+                  <div className="price_box">
+                  <div className="price_wrapp">
+                    <p className="sale_price">
+                      "W"
+                      "21000"
+                      </p>
+                    <p className="no_sale_price">
+                      "W"
+                      "25000"
+                    </p>
+                  </div>
+                  <div className="savat">
+                    <img src="/icons/cart.svg" />
+                  </div>
+                  </div>
+                  <div className="sold_out">Sold out</div>
+                  <div className="cart_bottom">
+                    <img src="/icons/stars.svg" />
+                  </div>
+                  </Box>
+              </Box>
+            </Stack>
+            <Stack className={"book_type"}>
+              <Box className={"type_box"}>
+                <span className={"cart_img"}>
+                  <img src={"/book/harrypotter.jpeg"} />
+                  
+                  </span>
+                  <div className="cart_desc">
+                    <h4 className="cart_name">History</h4>
+                  </div>
+                  <Box>
+                  <div className="price_box">
+                  <div className="price_wrapp">
+                    <p className="sale_price">
+                      "W"
+                      "21000"
+                      </p>
+                    <p className="no_sale_price">
+                      "W"
+                      "25000"
+                    </p>
+                  </div>
+                  <div className="savat">
+                    <img src="/icons/cart.svg" />
+                  </div>
+                  </div>
+                  <div className="sold_out">Sold out</div>
+                  <div className="cart_bottom">
+                    <img src="/icons/stars.svg" />
+                  </div>
+                  </Box>
+              </Box>
+            </Stack>
+          </Stack>
+          
+            <Stack
             className={"static_frame"}
             flexDirection={"row"}
             justifyContent={"space-between"}
             alignItems={"center"}
-          >
+            >
             <Stack className={"static_box"} m={"85px"}>
               <div
                 className="static_icon"
@@ -90,28 +218,6 @@ export function OneBook() {
               <Box className={"static_info"}>25,634</Box>
               <Box className={"static_text"}>Our happy customersnt.</Box>
             </Stack>
-          </Stack>
-          <Stack
-            display={"flex"}
-            flexDirection={"row"}
-            justifyContent={"flex-end"}
-            width={"75%"}
-            sx={{ mt: "65px" }}
-          >
-            <Box className={"dishs_filter_box"}>
-              <Button variant={"contained"} color="secondary">
-                new
-              </Button>
-              <Button variant={"contained"} color="secondary">
-                price
-              </Button>
-              <Button variant={"contained"} color="secondary">
-                likes
-              </Button>
-              <Button variant={"contained"} color="secondary">
-                views
-              </Button>
-            </Box>
           </Stack>
         </Stack>
       </Container>
@@ -163,7 +269,7 @@ export function OneBook() {
               >
                 {product_list.map((ele, index) => {
                   const size_volume = " Best Seller ";
-              return (
+                  return (
                     <Box className={"dish_box"} key={`${index}`}>
                       <Box
                         className={"dish_img"}
@@ -224,34 +330,26 @@ export function OneBook() {
         </Container>
       </div>
 
-      <Stack
-        style={{ width: "100%", display: "flex", minHeight: "600px" }}
+      <Container className={"member_reviews"}>
+        <Box className={"about_category"}>About Us Product</Box>
+        <Stack
+        display={"flex"}
         flexDirection={"row"}
-      >
-          <Box className={"books_category_box"}>
-          <div className={"dish_category_main"}>
-            <Button variant={"contained"} color="secondary">
-              Others
-            </Button>
-            <Button variant={"contained"} color="secondary">
-              Threller
-            </Button>
-            <Button variant={"contained"} color="secondary">
-              History
-            </Button>
-            <Button variant={"contained"} color="secondary">
-              Biography
-            </Button>
-            <Button variant={"contained"} color="secondary">
-              Children
-            </Button>
-            <Button variant={"contained"} color="secondary">
-              Poetry
-            </Button>
-          </div>
+        >
+          <Box className={"about_left"}
+          sx={{ backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi28fkpv3_JglWXqYndLCk9DQRWQxvJFSiBQ&usqp=CAU")`,}}>
+           <div className="about_left_desc">
+             <span></span>
+           </div>
           </Box>
-      </Stack>
 
+        </Stack>
+
+      </Container>
     </div>
   );
 }
+
+
+
+

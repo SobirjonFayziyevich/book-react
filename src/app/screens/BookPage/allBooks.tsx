@@ -34,6 +34,7 @@ export function AllBooks() {
       <Container>
         <Stack flexDirection={"row"}>
           <Stack className={"fil_search_box"}>
+
             <Box
               className={"fil_box"}
               style={{ cursor: "pointer", marginLeft: "20px" }}

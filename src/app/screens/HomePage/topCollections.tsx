@@ -23,7 +23,10 @@ export function TopCollections() {
             flexDirection={"column"}
             alignItems={"center"}
           >
-            <Box className={"category_title"}>Trending this week</Box>
+            <Box className={"category_title"}>
+             <h1 className={"message"}>FIND YOUR PLACE AT B&N'S ONLINE BOOKSTORE</h1> 
+             <span className="message_text">Over 5 million books ready to ship, 3.6 million eBooks and 300,000 audiobooks to download right now! Curbside pickup available in most stores!</span>
+              </Box>
 
             <Stack sx={{ mt: "43px" }} flexDirection={"row"} m={"16px"}>
               <CssVarsProvider>
