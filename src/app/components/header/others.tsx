@@ -5,7 +5,7 @@ import Badge from "@mui/material/Badge";
 
 export function NavbarOthers(props: any) {
   return (
-    <div className="format_order">
+    <div className="format_others home_navbar">
       <Container>
         <Stack
           flexDirection={"row"}

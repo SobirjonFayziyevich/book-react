@@ -88,7 +88,7 @@ export function NavbarHome(props: any) {
         <div className={"home_box"}>
           <Container>
             <Stack className="home_swiper">
-              <Swiper
+              {/* <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
@@ -108,7 +108,7 @@ export function NavbarHome(props: any) {
                     src={
                       "https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/02/07/28641.jpg"
                     }
-                    alt="Slide 2"
+                    alt="Slide 1"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -117,10 +117,10 @@ export function NavbarHome(props: any) {
                     src={
                       "https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28604_Quote_B1_BookClub_Good-Material_01-30.jpg"
                     }
-                    alt="Slide 2"
+                    alt="Slide 1"
                   />
                 </SwiperSlide>
-              </Swiper>
+              </Swiper> */}
             </Stack>
           </Container>
         </div>

@@ -7,15 +7,17 @@
 } 
 .format_book .home_navbar {
   width: 100%;
-  height: 800px;
+  height: 500px;
   display: flex;
+  background: url("https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28604_Quote_B2_Discover_HowWeNamestheStars_01-30_v2.jpg");
   background-size: cover;
 }
 
 .format_others .home_navbar{
   width: 100%;
-  height: 800px;
+  height: 500px;
   display: flex;
+  background: url("https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28604_Quote_B2_Discover_HowWeNamestheStars_01-30_v2.jpg");
   background-size: cover;
 }
 .format.home_navbar .home-swiper{
