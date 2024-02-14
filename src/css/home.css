@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background: url("/public/book/background-home.webp");
+  background-image: url("/public/book/background_img.jpeg");
 }
 
 /* TopCollection */

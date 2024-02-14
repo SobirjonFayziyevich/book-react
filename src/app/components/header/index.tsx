@@ -3,10 +3,7 @@ import { Box, Button, Container, IconButton, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -88,39 +85,6 @@ export function NavbarHome(props: any) {
         <div className={"home_box"}>
           <Container>
             <Stack className="home_swiper">
-              {/* <Swiper
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
-              >
-                <SwiperSlide>
-                  <img
-                    className={"swiper-img"}
-                    src={"https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/02/06/28641_Quote_A1_TheWome_02-06.jpg"}
-                    alt="Slide 1"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className={"swiper-img"}
-                    src={
-                      "https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/02/07/28641.jpg"
-                    }
-                    alt="Slide 1"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className={"swiper-img"}
-                    src={
-                      "https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28604_Quote_B1_BookClub_Good-Material_01-30.jpg"
-                    }
-                    alt="Slide 1"
-                  />
-                </SwiperSlide>
-              </Swiper> */}
             </Stack>
           </Container>
         </div>

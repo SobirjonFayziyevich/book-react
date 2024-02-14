@@ -347,7 +347,7 @@
 .book_page .single_page .type_box .cart_img:hover:before {
   border-radius: 0px 50px 0px 0px;
   opacity: 1;
-  background-image: url("https://wallpapers.com/images/hd/book-background-fe1vlrrmvaabwo8l.jpg");
+  /* background-image: url("https://wallpapers.com/images/hd/book-background-fe1vlrrmvaabwo8l.jpg"); */
 }
 /* .book_page .single_book .cart_img img {
   position: absolute;
@@ -685,7 +685,7 @@ margin-right: 20px;
 .book_page .single_page .dish_box .dish_img:hover:before {
   border-radius: 0px 50px 0px 0px;
   opacity: 1;
-  background-image: url("https://img.freepik.com/premium-vector/reading-pile-books-happy-students-sit-big-book-stack-read-learn-books-festival-poster-bookstore-library-vector-concept-illustration-training-studying-pile-book-literature_102902-3776.jpg?size=626&ext=jpg&uid=R135263787&ga=GA1.1.1465075339.1705997785&semt=ais");
+
 }
 .book_page .single_book .dish_img img {
   position: absolute;

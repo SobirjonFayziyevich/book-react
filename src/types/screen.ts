@@ -10,7 +10,7 @@ export interface AppRootState {
 
 /** HOMEPAGE */
 export interface HomePageState {
-    topCollections: Book[];  
+   topCollections: Book[];  
    bestSellers: Book[];
    trendProducts: Product[];
    bestBoArticles: BoArticle[];

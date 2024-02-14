@@ -1,6 +1,8 @@
 import { MeLiked } from "./product";
 
 export interface Book {
+    liked: any;
+    mb_liked: any;
     _id: string;   
     mb_nick: string;
     mb_phone: string;

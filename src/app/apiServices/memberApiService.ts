@@ -1,10 +1,10 @@
-import { serverApi } from "../../lib/config";
+import { serviceApi } from "../../lib/config";
 
 
 class MemberApiService{
     private readonly path: string;
     constructor() {
-        this.path = serverApi;
+        this.path = serviceApi;
     }
 }
 
