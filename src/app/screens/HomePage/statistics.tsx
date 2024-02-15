@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 
+
 export function Statistics() {
   return (
     <div className="static_frame">

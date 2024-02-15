@@ -19,16 +19,17 @@ import {
 } from "../../screens/HomePage/slice";
 import { Book } from "../../../types/user";
 import BookApiService from "../../apiServices/bookApiService";
-import { retrieveTopCollections } from "./selector";
+
 
 /** REDUX SLICE */
 const actionDispatch = (dispatch: Dispatch) => ({
   setTopCollections: (data: Book[]) => dispatch(setTopCollections(data)), // setTopCollectiong adata berayopman, datani type book array buladi.va slicedagi setTopCollectiong yuborayopman.
+  setBestSellers: (data: Book[]) => dispatch(setBestSellers(data)),
 });
 
 export function HomePage() {
   /** INITIALIZATION */
-  const { setTopCollections } = actionDispatch(useDispatch()); //HomePage slicedan setTopCollectionnni chaqirib oldim.
+  const { setTopCollections ,setBestSellers } = actionDispatch(useDispatch()); //HomePage slicedan setTopCollectionnni chaqirib oldim.
 
   useEffect(() => {
     //backend data request=> data;
@@ -39,13 +40,13 @@ export function HomePage() {
         setTopCollections(data);
       })
       .catch((err) => console.log(err));
-    // bookService // BestRestaurantning datalarini STORE qildik,
-    //   .getBookshop({ page: 1, limit: 4, order: "mb_point" })
-    //   .then((data) => {
-    //     console.log("best", data);
-    //     setBestSellers(data);
-    //   })
-    //   .catch((err) => console.log(err));
+    bookService 
+      .getBookshop({ page: 2, limit: 1, order: "mb_point" })
+      .then((data) => {
+        // console.log("best", data);
+        setBestSellers(data);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (

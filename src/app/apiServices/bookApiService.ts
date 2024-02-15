@@ -30,7 +30,7 @@ class BookApiService {
 
   async getBookshop(data: SearchObj): Promise<Book[]> {
     try {
-      const url = `/books?order=${data.order}&page=${data.page}&limit=${data.limit}`,
+       const url = `/books?order=${data.order}&page=${data.page}&limit=${data.limit}`,
         result = await axios.get(this.path + url, { withCredentials: true });
 
       assert.ok(result?.data, Definer.general_err1);

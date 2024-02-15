@@ -1,128 +1,54 @@
 import React from "react";
-import { Box, Container, Stack } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
-SwiperCore.use([Autoplay, Navigation, Pagination]);
+import { Container, Stack } from "@mui/material";
 
 export function Events() {
-  const events_list = [
-    {
-      title: "enjoying read books",
-      desc: "Read and learn and always increase our knowledge",
-      author: "John Deo",
-      date: "2022/10/01",
-      location: "Canada, Charlotto Town",
-      img: "/book/bookPage.jpg.webp",
-    },
-
-    {
-      title: "enjoying read books",
-      desc: "Read and learn and always increase our knowledge",
-      author: "J.K.Rowling",
-      date: "2023/11/16",
-      location: "USA, Chicago",
-      img: "/book/harrypotter.jpeg",
-    },
-
-    {
-      title: "enjoying read books",
-      desc: "Read and learn and always increase our knowledge",
-      author: "Lisa Jewell",
-      date: "2023/09/10",
-      location: "Tashkent, nurafshon street",
-      img: "/book/thriller.webp",
-    },
-
-    {
-      title: "enjoying read books",
-      desc: "Read and learn and always increase our knowledge",
-      author: "Pushkin",
-      date: "2021/11/15",
-      location: "Russia, Lomonovskiy street",
-      img: "/book/sher.jpeg",
-    },
-  ];
-
   return (
-    <div className={"events_frame"}>
-      <Container sx={{ overflow: "hidden" }}>
-        <Stack className={"events_main"}>
-          <Box className={"events_text"}>
-            <span className={"category_title"}>Lates News</span>
-          </Box>
-          <Swiper
-            className={"events_info swiper-wrapper"}
-            slidesPerView={"auto"}
-            centeredSlides={true}
-            spaceBetween={30}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            pagination={{
-              el: ".swiper-pagination",
-              clickable: true,
-            }}
-            autoplay={{
-              delay: 2000, // bu rasmlarni harakat tezligini belgilaydi.
-              disableOnInteraction: true, // buni manosi rasmlar harakatini tuxtatma degani.
-            }}
-          >
-            {events_list.map((value, number) => {
-              return (
-                <SwiperSlide className={"events_info_frame"}>
-                  <div className={"events_img"}>
-                    <img src={value.img} className={"events_img"} />
-                  </div>
-                  <Box className={"events_desc"}>
-                    <Box className={"events_bott"}>
-                      <Box className={"bott_left"}>
-                        <div className={"event_title_speaker"}>
-                          <strong>{value.title}</strong>
-                          <div className={"event_organizator"}>
-                            <img
-                              src={"/icons/speaker.svg"}
-                              style={{ width: "20px", marginRight: "10px" }}
-                            />
-                            <p className={"spec_text_author"}>{value.author}</p>
-                          </div>
-                        </div>
-                        <p
-                          className={"text_desc"}
-                          style={{ marginTop: "10px" }}
-                        >
-                          {" "}
-                          {value.desc}{" "}
-                        </p>
-                        <div
-                          className={"bott_info"}
-                          style={{ marginTop: "10px" }}
-                        >
-                          <div className={"bott_info_main"}>
-                            <img
-                              src={"/icons/Calendar.svg"}
-                              style={{ marginRight: "10px" }}
-                            />
-                            {value.date}
-                          </div>
-                          <div className={"bott_info_main"}>
-                            <img
-                              src={"/icons/location.svg"}
-                              style={{ marginRight: "5px" }}
-                            />
-                            {value.location}
-                          </div>
-                        </div>
-                      </Box>
-                    </Box>
-                  </Box>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+    <div className="events_frame">
+      <Container>
+        <Stack className={"black_book"}>
+          <img className="img_even"
+            src="https://assets-global.website-files.com/6267f35934aa8b1795cf1a9f/6596c51a582c7cdddb072c80_BHM-2024-header5.jpg"
+            loading="lazy"
+            width="852"
+            sizes="(max-width: 991px) 100vw, 852px"
+            alt=""
+          />
+          <div>
+            <p className="paragraph">
+              <strong>Bookshop.org</strong>" celebrates "
+            </p>
+            <h1 className="heading">Black History Month</h1>
+            <p className="text">
+              Join us in honoring Black History Month by purchasing a new book
+              by a Black author. Throughout February, choose any of the below
+              select titles* and receive
+              <strong>
+                {" "}
+                15% off at checkout with code: BHM24<br></br>
+              </strong>
+              <br></br>
+              During Black History Month and always, we encourage you to visit a
+              Black-owned bookstore in-person. Black-owned bookstores are
+              essential community hubs that foster culture, preserve Black
+              history, and nourish a love of reading. If you can’t visit a store
+              in-person, choose to support a Black-owned bookstore on
+            </p>
+            <p className="text_border">
+            Use the code 
+            <span className="text_span">
+              <strong className="bold_text"> BHM24 </strong>
+            </span>
+            to get
+            <strong> 15% OFF </strong>
+            select titles!
+            </p>
+            <p className="stic_text">
+              <em> *Discount valid on select titles February 1st–29th </em>
+            </p>
+          </div>
         </Stack>
       </Container>
     </div>
   );
 }
+
