@@ -8,6 +8,7 @@ import { FavoriteBorder } from "@mui/icons-material";
 import Favorite from "@mui/icons-material/Favorite";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import { url } from "inspector";
 
 
 const book_list = Array.from(Array(3).keys());
@@ -330,21 +331,62 @@ export function OneBook() {
         </Container>
       </div>
 
-      <Container className={"member_reviews"}>
-        <Box className={"about_category"}>About Us Product</Box>
+      <Container className="member_reviews">
+        <Box className={"category_titlees"}>About Us</Box>
         <Stack
-        display={"flex"}
-        flexDirection={"row"}
+          display={"flex"}
+          flexDirection={"row"}
+          width={"90%"}
+          sx={{ mt: "70px" }}
         >
-          <Box className={"about_left"}
-          sx={{ backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi28fkpv3_JglWXqYndLCk9DQRWQxvJFSiBQ&usqp=CAU")`,}}>
-           <div className="about_left_desc">
-             <span></span>
-           </div>
+          <Box
+            className={"about_left"}
+            sx={{
+              // backgroundImage: `url(${serverApi}/${chosenRestaurant?.mb_image})`,
+              backgroundImage: `url("/book/housemand.jpeg")`,
+            }}
+          >
+            <div className={"about_left_desc"}>
+              {/* <span>{chosenRestaurant?.mb_nick}</span> */}
+              <span>Children</span>
+              {/* <p>{chosenRestaurant?.mb_description}</p> */}
+              <p>very good</p>
+            </div>
           </Box>
-
+          <Box className={"about_right"}>
+            {Array.from(Array(3).keys()).map((ele, index) => {
+              return (
+                <Box display={"flex"} flexDirection={"row"} key={index}>
+                  <div className={"about_right_img"}></div>
+                  <div className={"about_right_desc"}>
+                    <span>Tony Robbins returns with the final book in his financial</span>
+                    <p>
+                    They share their favorite strategies and insights in this practical guidebook.
+                    </p>
+                  </div>
+                </Box>
+              );
+            })}
+          </Box>
         </Stack>
 
+        <Stack
+          sx={{ mt: "60px" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Box className={"category_titla"}> Store Address </Box>
+          <iframe
+            style={{ marginTop: "60px" }}
+            src="https://image.cnbcfm.com/api/v1/image/100416482-google-map-maker-north-korea-google-youtube.jpg?v=1359477081&w=1600&h=900"
+            width="1320"
+            height="500"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </Stack>
       </Container>
     </div>
   );

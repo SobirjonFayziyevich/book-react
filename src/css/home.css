@@ -127,7 +127,6 @@
 
 /* Top rated Books finish */
 
-/*Events SECTION*/
 
 .homepage .events_frame {
   margin-top: 15px;
@@ -419,98 +418,220 @@ margin-left: 110px;
   overflow: hidden;
 }
 
-/* Recomendation */
+/* Recomendations*/
 
-.homepage .recomend_frame {
+.homepage .recom_frame {
+  margin-top: 1px;
   width: 100%;
-  height: 720px;
-  flex-shrink: 0;
-  background: #fff;
-  padding: 50px 100px 50px 100px;
+  height: 700px;
+  display: flex;
+  overflow: hidden;
 }
 
-.homepage .recomendation_top h1 {
-  color: #000;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 30px;
-  margin-bottom: 1px;
+.homepage .recom_main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.homepage .recomendation_top p {
-  margin-bottom: 1px;
-  width: 584px;
-  height: 53px;
+
+.homepage .recom_main .recom_text .category_title {
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 350px;
-  flex-shrink: 0;
-  color: rgba(0, 0, 0, 0.6);
-  text-align: center;
-  font-family: Poppins;
-  font-size: 16px;
+  margin-top: 40px;
+}
+
+.homepage .recom_main .prev_next_frame {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 24px;
+  margin-left: 901px;
+  margin-top: 19px;
+}
+
+.homepage .dot_frame_pagination {
+  position: relative;
+  width: auto;
+  display: flex;
+}
+
+.homepage .recom_main .recom_info {
+  margin-top: 75px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage .recom_frame .recom_info_frame {
+  position: relative;
+  width: 579px;
+  height: 447px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homepage .recom_img {
+  width: 430px;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.homepage .recom_desc {
+  position: absolute;
+  padding: 10px;
+  display: flex;
+  width: 90%;
+  height: auto;
+  bottom: 5px;
+  background: #FFFFFF;
+  box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
+  border-radius: 8px;
+}
+
+.homepage .recom_desc .recom_bott {
+  width: 97%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homepage .recom_desc .recom_bott .bott_left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage .bott_left .recomm_title_speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage  .recomm_title_speaker .recomm_organizator {
+  display: flex;
+  align-items: center;
+}
+.homepage .recomm_organizator .spec_text_author {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  line-height: 34px;
+  color: #140342;
+}
+
+.homepage .bott_left .text_desc {
+  font-family: "GT Walsheim Pro";
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-top: 30px;
+  font-size: 17px;
+  line-height: 26px;
+  color: #4f547b;
 }
-.homepage .recom_middle_box {
+
+.homepage .bott_info .bott_info_main {
+  margin-left: 10px;
   display: flex;
   justify-content: space-between;
-  position: relative;
-}
-
-.homepage .img_box img {
-  margin-top: 60px;
-  width: 372px;
-  height: 210px;
-  flex-shrink: 0;
-  border-radius: 10px;
-  background: #c4c4c4;
-  margin-bottom: 1px;
-}
-
-.homepage .book_def h4 {
-  width: 343px;
-  color: #000;
-  font-family: Poppins;
-  font-size: 18px;
+  flex-direction: row;
+  font-family: "GT Walsheim Pro";
   font-style: normal;
-  font-weight: 600;
-  line-height: 32px; /* 177.778% */
-  margin-bottom: 1px;
-  margin-top: 15px;
-}
-.homepage .book_def p {
-  width: 372px;
-  height: 70px;
-  flex-shrink: 0;
-  color: rgba(0, 0, 0, 0.5);
-  font-family: Poppins;
   font-size: 14px;
+  line-height: 16px;
+  color: #4f547b;
+}
+
+.homepage .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage .swiper-pagination-bullet {
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  opacity: 1;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.homepage .swiper-pagination-bullet-active {
+  background: #007aff;
+  border-radius: 50%;
+} 
+
+.homepage .bott_left .recomm_title_speaker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.homepage  .recomm_title_speaker .recomm_organizator {
+  display: flex;
+  align-items: center;
+}
+.homepage .recomm_organizator .spec_text_author {
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  line-height: 34px;
+  color: #140342;
+}
+
+.homepage .bott_left .text_desc {
+  font-family: "GT Walsheim Pro";
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 26px;
+  color: #4f547b;
 }
-.homepage .author_book img {
-  width: 54px;
-  height: 54px;
-  flex-shrink: 0;
-  margin-bottom: 1px;
-}
-.homepage .author_book p {
-  color: #3d3d3d;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+
+.homepage .bott_info .bott_info_main {
+  margin-left: 10px;
+  display: inline-block;
+  justify-content: flex-end;
   flex-direction: row;
-  padding: 0px 34px 0px 6px;
+  width: auto;
+  font-family: "GT Walsheim Pro";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f547b;
 }
+
+.homepage .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.homepage .swiper-pagination-bullet {
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  opacity: 1;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+
+.homepage .swiper-pagination-bullet-active {
+  background: #007aff;
+  border-radius: 50%;
+} 
 
 /* Comment */
 .homepage .comment_frame {

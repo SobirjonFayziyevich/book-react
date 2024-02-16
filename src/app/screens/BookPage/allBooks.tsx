@@ -14,8 +14,6 @@ import { Favorite, Visibility } from "@mui/icons-material";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import CallIcon from "@mui/icons-material/Call";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Container } from "@mui/system";
 import Slider, { sliderClasses } from "@mui/joy/Slider";
@@ -34,12 +32,11 @@ export function AllBooks() {
       <Container>
         <Stack flexDirection={"row"}>
           <Stack className={"fil_search_box"}>
-
             <Box
               className={"fil_box"}
               style={{ cursor: "pointer", marginLeft: "20px" }}
             >
-              <div className="fil_box_name">Categories:</div>
+              <div className="fil_box_name"> Sub Categories:</div>
 
               <FormGroup>
                 <FormControlLabel
@@ -74,7 +71,8 @@ export function AllBooks() {
               </FormGroup>
             </Box>
             <CssVarsProvider>
-              <Box
+
+            <Box
                 className={"price_range"}
                 style={{ cursor: "pointer", marginLeft: "20px" }}
               >
@@ -132,6 +130,7 @@ export function AllBooks() {
                 </Box>
               </Box>
             </CssVarsProvider>
+           
 
             <Box className={"search_big_box"} style={{ marginBottom: "70px" }}>
               <form className={"search_form"} action={""} method={""}>
@@ -151,124 +150,133 @@ export function AllBooks() {
               </form>
             </Box>
           </Stack>
-
+          
           <Stack className={"all_book_box"} sx={{ mr: "100px" }}>
             <CssVarsProvider>
-              {order_list.map(ele => {
+              {order_list.map((ele) => {
                 return (
                   <Card
-                  variant="outlined"
-                  sx={{
-                    minHeight: 410,
-                    minWidth: 290,
-                    mx: "17px",
-                    my: "20px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <CardOverflow>
-                    <AspectRatio ratio="1">
-                      <img src={"/book/thriller.webp"} alt="" />
-                    </AspectRatio>
-                    <IconButton
-                      aria-label="Like minimal photography"
-                      size="md"
-                      variant="solid"
-                      color="neutral"
-                      sx={{
-                        position: "absolute",
-                        zIndex: 2,
-                        borderRadius: "50%",
-                        right: "1rem",
-                        marginBottom: "50px",
-                        bottom: 0,
-                        transform: "translateY(50%)",
-                        color: "rgba(0,0,0, .04)",
-                      }}
-                    >
-                      <Favorite
-                        style={{ color: "white" }}
-                        //   style={{
-                        //     fill:
-                        //       ele?.me_liked && ele?.me_liked[0]?.my_favorite
-                        //         ? "red"
-                        //         : "white",
-                        //   }}
-                      />
-                    </IconButton>
-                    {/* </CardOverflow> */}
-                    <Typography level="h2" sx={{ fontSize: "md", mt: 2 }}>
-                      The Hard
-                    </Typography>
-                    <Typography level="body-sm" sx={{ mt: 0.5, mb: 2 }}>
-                      <Link
-                        href=""
-                        startDecorator={<LocationOnRoundedIcon />}
-                        textColor="black"
-                      >
-                        USA, Chicago.
-                      </Link>
-                    </Typography>
-  
-                    <Typography level="body-sm" sx={{ mt: 0.5, mb: 0.5 }}>
-                      <Link
-                        href=""
-                        startDecorator={<CallIcon />}
-                        textColor="black"
-                      >
-                        +8210 8058 0771
-                      </Link>
-                    </Typography>
-                    <CardOverflow
-                      variant="soft"
-                      sx={{
-                        display: "flex",
-                        flexDirection: "row",
-                        gap: 1.5,
-                        py: 1.5,
-                        px: "var(--Card-padding)",
-                        borderTop: "1px solid",
-                        bgcolor: "background.level1",
-                      }}
-                    >
-                      <Typography
-                        level="body-sm"
+                    variant="outlined"
+                    sx={{
+                      minHeight: 410,
+                      minWidth: 290,
+                      mx: "17px",
+                      my: "20px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <CardOverflow>
+                      <AspectRatio ratio="1">
+                        <img src={"/book/thriller.webp"} alt="" />
+                      </AspectRatio>
+                      <IconButton
+                        aria-label="Like minimal photography"
+                        size="md"
+                        variant="solid"
+                        color="neutral"
                         sx={{
-                          fontWeight: "md",
-                          color: "text.secondary",
-                          alignItems: "center",
-                          display: "flex",
+                          position: "absolute",
+                          zIndex: 2,
+                          borderRadius: "50%",
+                          right: "1rem",
+                          marginBottom: "50px",
+                          bottom: 0,
+                          transform: "translateY(50%)",
+                          color: "rgba(0,0,0, .04)",
                         }}
                       >
-                        100{" "}
-                        <VisibilityIcon
-                          sx={{ fontSize: 20, marginLeft: "5px" }}
+                        <Favorite
+                          style={{ color: "white" }}
+                          //   style={{
+                          //     fill:
+                          //       ele?.me_liked && ele?.me_liked[0]?.my_favorite
+                          //         ? "red"
+                          //         : "white",
+                          //   }}
                         />
+                      </IconButton>
+                      {/* </CardOverflow> */}
+                      <Typography level="h2" sx={{ fontSize: "md", mt: 2 }}>
+                        The Hard
                       </Typography>
-                      <Box sx={{ width: 2, bgcolor: "divider" }} />
-                      <Typography
-                        level="body-sm"
+                      <Typography level="body-sm" sx={{ mt: 0.5, mb: 2 }}>
+                        <Link
+                          href=""
+                          startDecorator={<LocationOnRoundedIcon />}
+                          textColor="black"
+                        >
+                          USA, Chicago.
+                        </Link>
+                      </Typography>
+
+                      <Typography level="body-sm" sx={{ mt: 0.5, mb: 0.5 }}>
+                        <Link
+                          href=""
+                          startDecorator={<CallIcon />}
+                          textColor="black"
+                        >
+                          +8210 8058 0771
+                        </Link>
+                      </Typography>
+                      <CardOverflow
+                        variant="soft"
                         sx={{
-                          fontWeight: "md",
-                          color: "text.secondary",
-                          alignItems: "center",
                           display: "flex",
+                          flexDirection: "row",
+                          gap: 1.5,
+                          py: 1.5,
+                          px: "var(--Card-padding)",
+                          borderTop: "1px solid",
+                          bgcolor: "background.level1",
                         }}
                       >
-                        <div>12</div>
-                        <FavoriteIcon sx={{ fontSize: 20, marginLeft: "5px" }} />
-                      </Typography>
+                        <Typography
+                          level="body-sm"
+                          sx={{
+                            fontWeight: "md",
+                            color: "text.secondary",
+                            alignItems: "center",
+                            display: "flex",
+                          }}
+                        >
+                          100{" "}
+                          <VisibilityIcon
+                            sx={{ fontSize: 20, marginLeft: "5px" }}
+                          />
+                        </Typography>
+                        <Box sx={{ width: 2, bgcolor: "divider" }} />
+                        <Typography
+                          level="body-sm"
+                          sx={{
+                            fontWeight: "md",
+                            color: "text.secondary",
+                            alignItems: "center",
+                            display: "flex",
+                          }}
+                        >
+                          <div>12</div>
+                          <FavoriteIcon
+                            sx={{ fontSize: 20, marginLeft: "5px" }}
+                          />
+                        </Typography>
+                      </CardOverflow>
                     </CardOverflow>
-                  </CardOverflow>
-                </Card>
+                  </Card>
                 );
               })}
-          
             </CssVarsProvider>
-          </Stack>
+          </Stack>  
         </Stack>
       </Container>
-      
+
+      <div className="picture">
+        <Box className="picture_box">
+               <div className="picture_main">
+                 <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/02/15/28757_BB_D_Easter_02-15.jpg" />
+
+               </div>
+              </Box>
+              </div>   
     </div>
   );
 }

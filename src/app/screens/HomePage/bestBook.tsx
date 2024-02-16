@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container, Stack } from "@mui/material";
-import { url } from "inspector";
+import { Box, Container, Slider, Stack } from "@mui/material";
+
 
 export function BestBook() {
   return (
@@ -73,3 +73,5 @@ export function BestBook() {
     </div>
   );
 }
+
+

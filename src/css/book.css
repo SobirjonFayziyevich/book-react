@@ -2,19 +2,22 @@
   position: relative;
   width: 100%;
   height: auto;
-  background: #a4a5a7;
+  background-color: #8fc1c8;
+  flex-direction: row;
+  justify-content:space-between;
+
 }
 
 .book_page .all_book .fil_search_box {
   width: 280px;
-  height: 550px;
+  height: 530px;
   margin-top: 300px;
   margin-right: 18px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(236, 231, 231);
 }
 .book_page .all_book .fil_box_name {
   width: auto;
@@ -213,6 +216,21 @@
   font-weight: 400;
   line-height: normal;
 }
+.book_page .picture {
+  flex-direction: row;
+  display: flex;
+  margin: 3px 0 0 0;
+  padding: 0;
+}
+.book_page .picture_box .picture_main{
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  z-index: 0;
+  margin-left: 600px;
+}
 
 /* SINGLE_PAGE */
 .book_page .single_page {
@@ -220,14 +238,14 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  background: #380b46;
+  background:  #5C067C;
 }
 
 .book_page .single_page {
   display: flex;
   width: 100%;
   height: auto;
-  background: #380b46;
+  /* background:  #5C067C; */
 }
 .book_page .single_page .top_text {
   position: relative;
@@ -344,18 +362,6 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
-.book_page .single_page .type_box .cart_img:hover:before {
-  border-radius: 0px 50px 0px 0px;
-  opacity: 1;
-  /* background-image: url("https://wallpapers.com/images/hd/book-background-fe1vlrrmvaabwo8l.jpg"); */
-}
-/* .book_page .single_book .cart_img img {
-  position: absolute;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  z-index: 1;
-} */
 .single_page .type_box .cart_img .discount {
   align-items: center;
   background:floralwhite;
@@ -749,21 +755,109 @@ margin-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 1px;
   margin-bottom: 60px;
-}
+  background-color: #ffffff;
 
-.book_page .single_page .review_for_restaurant {
-  margin-top: 60px;
-  height: 630px;
-  width: 100%;
+}
+.book_page .single_page .category_titlees {
+  color: #090808;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 43px;
+}
+.book_page .single_page .about_left {
+  width: 50%;
+  height: auto;
   display: flex;
-  background-color: #0d1518;
+  align-items: flex-end;
+  border-radius: 0px 50px 0px 0px;
+  background-size: cover;
+  background-position: center;
+}
+.book_page .single_page .about_left .about_left_desc {
+  padding: 20px;
+  width: 100%;
+  height: 329px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.25));
 }
 
-.book_page .single_page.category_title {
-  color: #e3c08d;
-  font-family: "Dancing Script";
+.book_page .single_page .about_left_desc span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.book_page .single_page .about_right {
+  margin-left: 20px;
+  width: 50%;
+  height: 480px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book_page .single_page .about_left_desc p {
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #d4d4d4;
+}
+
+.book_page .single_page .about_right .about_right_img {
+  width: 160px;
+  height: 140px;
+  left: 763px;
+  top: 3653px;
+
+  display: flex;
+  border-radius: 0px 40px 0px 0px;
+  background: url("https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781668052686_p0_v4_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D");
+  background-size: cover;
+  background-position: center;
+}
+.book_page .single_page .about_right .about_right_desc {
+  padding-bottom: 5px;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.book_page .single_page .about_right_desc span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #090808;
+}
+
+.book_page .single_page .about_right_desc p {
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #090808;
+}
+.book_page .single_page .category_titla {
+  color: #090808;
+  font-family:'Courier New', Courier, monospace;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
