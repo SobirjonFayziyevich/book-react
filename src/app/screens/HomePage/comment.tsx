@@ -80,10 +80,10 @@ export function Comment() {
                 </Box>
               </Box>
             </Stack>
-         </Stack>
-          <Stack spacing={1} sx={{flexDirection: "row", marginTop: "30px"}}>
-                <Pagination count={4} size="large" />
-              </Stack>
+          </Stack>
+          <Stack spacing={1} sx={{ flexDirection: "row", marginTop: "30px" }}>
+            <Pagination count={4} size="large" />
+          </Stack>
         </Stack>
       </Container>
     </div>

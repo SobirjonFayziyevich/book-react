@@ -74,7 +74,6 @@ export function Recommendation() {
                 <SwiperSlide className={"recom_info_frame"}>
                   <div className={"recom_img"}>
                     <img src={value.img} className={"recom_img"} />
-                    {/* <img src={"/book/diana.png"} className={"recom_img"} /> */}
                   </div>
                   <Box className={"recom_desc"}>
                     <Box className={"recom_bott"}>

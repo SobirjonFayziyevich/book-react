@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, Button, FormControlLabel, FormGroup, Stack } from "@mui/material";
+import { Box, Button, FormControlLabel, FormGroup, Pagination, Stack } from "@mui/material";
 import Typography from "@mui/joy/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -266,13 +266,14 @@ export function AllBooks() {
               })}
             </CssVarsProvider>
           </Stack>  
+         
         </Stack>
       </Container>
 
       <div className="picture">
         <Box className="picture_box">
                <div className="picture_main">
-                 <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/02/15/28757_BB_D_Easter_02-15.jpg" />
+                 <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28606_BB_B_OMP_02-01_b.jpg" />
 
                </div>
               </Box>

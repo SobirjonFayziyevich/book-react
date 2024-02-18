@@ -265,20 +265,20 @@ export function OneBook() {
               </Stack>
 
               <Stack
-                className={"dish_wrapper"}
+                className={"book_wrapper"}
                 style={{ flexDirection: "column", marginRight: "50px" }}
               >
                 {product_list.map((ele, index) => {
                   const size_volume = " Best Seller ";
                   return (
-                    <Box className={"dish_box"} key={`${index}`}>
+                    <Box className={"book_box"} key={`${index}`}>
                       <Box
-                        className={"dish_img"}
+                        className={"book_img"}
                         sx={{
-                          backgroundImage: `url("/book/world.his.jpeg")`,
+                          backgroundImage: `url("/book/dubliners.png")`,
                         }}
                       >
-                        <div className={"dish_sale"}>{size_volume}</div>
+                        <div className={"book_sale"}>{size_volume}</div>
                         <Button
                           className={"like_view_btn"}
                           style={{ left: "36px" }}
@@ -315,9 +315,9 @@ export function OneBook() {
                           </Badge>
                         </Button>
                       </Box>
-                      <Box className={"dish_desc"}>
-                        <span className={"dish_title_text"}>History</span>
-                        <div className={"dish_desc_text"}>
+                      <Box className={"book_desc"}>
+                        <span className={"book_title_text"}>History</span>
+                        <div className={"book_desc_text"}>
                           <MonetizationOnIcon />
                           12
                         </div>

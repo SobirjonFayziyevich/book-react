@@ -2,10 +2,9 @@
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #8fc1c8;
+  background-color: #fff;
   flex-direction: row;
-  justify-content:space-between;
-
+  justify-content: space-between;
 }
 
 .book_page .all_book .fil_search_box {
@@ -156,14 +155,13 @@
 }
 
 .book_page .all_book .all_book_box {
-  position: relative;
-  width: 1305px;
-  height: auto;
-  /* margin-bottom: 400px; */
   display: flex;
-  margin-top: 70px;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  width: 100%;
 }
 .book_page .all_book .book_box {
   margin: 13px;
@@ -208,6 +206,9 @@
   font-weight: 600;
   line-height: normal;
 }
+
+
+
 .book_page .all_book_box .our_service b {
   color: #755a7d;
   font-family: Poppins;
@@ -217,19 +218,18 @@
   line-height: normal;
 }
 .book_page .picture {
-  flex-direction: row;
-  display: flex;
-  margin: 3px 0 0 0;
-  padding: 0;
+  height: auto;
+  width: calc(100% - 70px);
+  max-width: 1366px;
+  padding: 0 !important;
+  margin: 0 auto 40px;
+  clear: both;
 }
-.book_page .picture_box .picture_main{
-  width: 100%;
-  max-width: 100%;
+.book_page .picture_box .picture_main {
   position: relative;
   margin: 0 auto;
   height: auto;
   z-index: 0;
-  margin-left: 600px;
 }
 
 /* SINGLE_PAGE */
@@ -238,14 +238,13 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  background:  #5C067C;
+  background-color:#fffcfc;
 }
 
 .book_page .single_page {
   display: flex;
   width: 100%;
   height: auto;
-  /* background:  #5C067C; */
 }
 .book_page .single_page .top_text {
   position: relative;
@@ -267,7 +266,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
-  color: #f9f9f9;
+  color:#140342;
   padding: 0px 15px;
 }
 .book_page .single_page .Single_search_big_box {
@@ -305,7 +304,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
-  color: #4f547b;
+  color:#000;
 }
 
 .book_page .single_page .Single_button_search {
@@ -364,7 +363,7 @@
 }
 .single_page .type_box .cart_img .discount {
   align-items: center;
-  background:floralwhite;
+  background: floralwhite;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   display: flex;
@@ -384,14 +383,13 @@
   padding-top: 5px;
 }
 .single_page .type_box .cart_desc {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   height: 50px;
 }
 .single_page .type_box .cart_name {
   color: rgb(11, 21, 23);
   font-size: 20px;
-
 }
 .single_page .price_box {
   align-items: center;
@@ -417,22 +415,22 @@
   text-decoration: line-through;
 }
 
-.single_page .price_box .savat{
-margin-right: 20px;
+.single_page .price_box .savat {
+  margin-right: 20px;
 }
-.single_page .sold_out{
+.single_page .sold_out {
   opacity: 0;
 }
 
-.single_page .price_box .cart_bottom{
+.single_page .price_box .cart_bottom {
   align-items: flex-end;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .book_page .single_page .static_info {
-  color: #fff;
+  color: #140342;
   font-family: Poppins;
   font-size: 50px;
   font-style: normal;
@@ -441,7 +439,7 @@ margin-right: 20px;
   background-image: url("");
 }
 .book_page .single_page .static_text {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(1, 0, 0, 0.6);
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
@@ -449,7 +447,7 @@ margin-right: 20px;
   line-height: normal;
   padding: 5px;
 }
-.single_page .dishs_filter_box {
+.single_page .books_filter_box {
   width: 37%;
   height: auto;
   display: flex;
@@ -491,7 +489,7 @@ margin-right: 20px;
 .book_page .single_page .main_box {
   width: 100%;
   height: 572px;
-  background-color: gainsboro;
+  background-color:#fffcfc;
   margin-top: 2spx;
   display: flex;
 }
@@ -606,7 +604,7 @@ margin-right: 20px;
   background: #c4c4c4;
   margin-left: 100px;
 }
-.book_page .single_page .dish-wrapper {
+.book_page .single_page .book-wrapper {
   margin-right: 50px;
   width: 100%;
   height: auto;
@@ -615,21 +613,21 @@ margin-right: 20px;
   flex-direction: column;
   /* flex-wrap: wrap; */
 }
-.book_page .single_page .dish_box {
+.book_page .single_page .book_box {
   width: 273px;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.book_page .single_page .dish_box .dish_img {
+.book_page .single_page .book_box .book_img {
   position: relative;
   width: 273px;
   height: 275px;
   background-size: cover;
   border-radius: 0px 50px 0px 0px;
 }
-.book_page .single_page .dish_img .dish_sale {
+.book_page .single_page .book_img .book_sale {
   margin-top: 43px;
   width: 84px;
   height: 39px;
@@ -646,14 +644,14 @@ margin-right: 20px;
   line-height: 21px;
   background: #ff7a00;
 }
-.book_page .single_page .dish_box .dish_desc {
+.book_page .single_page .book_box .book_desc {
   width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
 }
-.book_page .single_page .dish_box .dish_desc .dish_title_text {
+.book_page .single_page .book_box .book_desc .book_title_text {
   margin-top: 18px;
   font-family: "Poppins";
   font-style: normal;
@@ -662,7 +660,7 @@ margin-right: 20px;
   line-height: 30px;
   color: #120f0f;
 }
-.book_page .single_page .dish_box .dish_desc .dish_desc_text {
+.book_page .single_page .book_box .book_desc .book_desc_text {
   margin-top: 15px;
   font-family: "Poppins";
   font-style: normal;
@@ -675,7 +673,7 @@ margin-right: 20px;
   justify-content: center;
   align-items: center;
 }
-.book_page .single_page .dish_box .dish_img:before {
+.book_page .single_page .book_box .book_img:before {
   border-radius: 0px 50px 0px 0px;
   content: "";
   opacity: 0;
@@ -687,13 +685,14 @@ margin-right: 20px;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
+  
 }
-.book_page .single_page .dish_box .dish_img:hover:before {
+.book_page .single_page .book_box .book_img:hover:before {
   border-radius: 0px 50px 0px 0px;
   opacity: 1;
-
+  
 }
-.book_page .single_book .dish_img img {
+.book_page .single_book .book_img img {
   position: absolute;
   display: block;
   max-width: 100%;
@@ -727,7 +726,7 @@ margin-right: 20px;
 
   color: #ffffff;
 }
-.book_page .single_page .dish_img:hover .view_btn {
+.book_page .single_page .book_img:hover .view_btn {
   opacity: 1;
 }
 .book_page .single_page .like_view_btn {
@@ -748,7 +747,7 @@ margin-right: 20px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 50%;
 }
-.book_page .single_page .dish_img:hover .like_view_btn {
+.book_page .single_page .book_img:hover .like_view_btn {
   opacity: 1;
 }
 .book_page .single_page .member_reviews {
@@ -758,11 +757,10 @@ margin-right: 20px;
   margin-top: 1px;
   margin-bottom: 60px;
   background-color: #ffffff;
-
 }
 .book_page .single_page .category_titlees {
   color: #090808;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -857,9 +855,189 @@ margin-right: 20px;
 }
 .book_page .single_page .category_titla {
   color: #090808;
-  font-family:'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
   line-height: 43px;
+}
+
+
+
+
+/*Chosen Dish Page*/
+
+.chosen_book_page {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #0b0e11;
+}
+
+.book_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 623px;
+  height: 452px;
+}
+
+.chosen_book_page .chosen_book_slider {
+  width: 611px;
+  height: 570px;
+}
+
+.chosen_book_page .book_swiper {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+  width: 100%;
+  height: 452px;
+  flex-shrink: 0;
+  border-radius: 16px;
+}
+
+.chosen_book_page .book_swiper_two {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-color: #fff;
+  width: 500px;
+  height: 107px;
+  border-radius: 10px;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.chosen_book_info_container {
+  padding: 30px 40px;
+  width: 623px;
+  height: 452px;
+  display: flex;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.chosen_book_info_container .chosen_book_info_box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chosen_book_info_box .book_txt {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.chosen_book_info_box .book_name {
+  margin-top: 16px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 15px;
+  color: #090808;
+}
+
+.chosen_book_info_container .book_text {
+  width: 288px;
+  height: 38px;
+  flex-shrink: 0;
+  color: #000;
+
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.chosen_book_info_container .resto_name {
+  width: 80px;
+  height: 16px;
+  flex-shrink: 0;
+
+  color: #000;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.chosen_book_info_container .rating_box {
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.rating_box .evaluation_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chosen_book_info_container p {
+  width: 543px;
+  height: 112px;
+  flex-shrink: 0;
+
+  color: #2c261e;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.book_price_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: normal;
+}
+
+.book_price_box span {
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: normal;
+}
+
+.button_box {
+  width: 177.255px;
+  height: 20.974px;
+  flex-shrink: 0;
+  display: flex;
+  margin-top: 60px;
+  margin-left: 200px;
+  align-items: center;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 4px;
 }

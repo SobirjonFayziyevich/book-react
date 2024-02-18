@@ -12,7 +12,7 @@ export function BookPage() {
   return (
     <div className="book_page">
       <Switch>
-        <Route path={`${book.path}/dish/:dish_id`}>
+        <Route path={`${book.path}/book/:book_id`}>
           <ChosenBook/>
         </Route>
         <Route path={`${book.path}/:book_id`}>

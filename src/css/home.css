@@ -1,9 +1,10 @@
 .homepage {
-  background: rgba(178, 165, 182, 0.73);
+  background: #fff;
   width: 100%;
   height: 100%;
   background-size: cover;
   background-image: url("/public/book/background_img.jpeg");
+  margin-bottom: 40px;
 }
 
 /* TopCollection */
@@ -12,7 +13,7 @@
   width: 100%;
   height: 628px;
   display: flex;
-  background: #ffffff;
+  background: #fff;
 }
 
 .homepage .category_title {
@@ -41,7 +42,7 @@
 }
 /* Statics */
 .homepage {
-  background: #ffffff;
+  background: #fff;
 }
 .homepage .static_box .static_info {
   color: #000;
@@ -69,7 +70,7 @@
 .homepage .best_seller_frame {
   width: 100%;
   height: 480px;
-  background: rgb(237, 235, 232);
+  background: #ffffff;
 }
 .homepage .seller_frame_box {
   color: #000;
@@ -85,7 +86,7 @@
 .homepage .best_book_frame {
   width: 100%;
   height: 600px;
-  background: #fcf8fd;
+  background: #ffffff;
 }
 .homepage .top_book_title {
   color: #000;
@@ -127,7 +128,6 @@
 
 /* Top rated Books finish */
 
-
 .homepage .events_frame {
   margin-top: 15px;
   height: 900px;
@@ -144,8 +144,8 @@
   margin-top: -10px;
 }
 
-.homepage .events_frame .black_book .img_even{
-margin-left: 110px;  
+.homepage .events_frame .black_book .img_even {
+  margin-left: 110px;
 }
 .homepage .events_frame .paragraph {
   text-align: center;
@@ -175,7 +175,7 @@ margin-left: 110px;
   font-family: IBM Plex Sans, sans-serif;
 }
 
-.homepage .events_frame .text_border{
+.homepage .events_frame .text_border {
   color: #47838b;
   text-align: center;
   background-color: #fff;
@@ -184,18 +184,18 @@ margin-left: 110px;
   margin-left: 180px;
   margin-right: 268px;
   padding: 11px 0;
-  font-size: 18px;  
+  font-size: 18px;
   line-height: 24px;
   font-family: IBM Plex Sans, sans-serif;
 }
-.homepage .events_frame .bold_text{
+.homepage .events_frame .bold_text {
   color: #161616;
   font-size: 19px;
   font-weight: bold;
   box-sizing: border-box;
 }
 
-.homepage .events_frame .stic_text{
+.homepage .events_frame .stic_text {
   text-align: center;
   margin-top: 16px;
   font-size: 18px;
@@ -203,7 +203,6 @@ margin-left: 110px;
   font-family: IBM Plex Sans, sans-serif;
   margin-right: 90px;
 }
-
 
 .homepage .events_main {
   position: relative;
@@ -421,16 +420,13 @@ margin-left: 110px;
 /* Recomendations*/
 
 .homepage .recom_frame {
-  margin-top: 1px;
-  width: 100%;
-  height: 700px;
-  display: flex;
-  overflow: hidden;
+  margin-top: 2px 0 0 0;
+  padding: 0;
 }
 
 .homepage .recom_main {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -481,7 +477,7 @@ margin-left: 110px;
 }
 
 .homepage .recom_img {
-  width: 430px;
+  width: 550px;
   height: 100%;
   display: flex;
   border-radius: 10px;
@@ -495,7 +491,7 @@ margin-left: 110px;
   width: 90%;
   height: auto;
   bottom: 5px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 40px 30px rgba(25, 25, 46, 0.04);
   border-radius: 8px;
 }
@@ -522,7 +518,7 @@ margin-left: 110px;
   justify-content: space-between;
 }
 
-.homepage  .recomm_title_speaker .recomm_organizator {
+.homepage .recomm_title_speaker .recomm_organizator {
   display: flex;
   align-items: center;
 }
@@ -565,14 +561,14 @@ margin-left: 110px;
   height: 8px;
   text-align: center;
   opacity: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50%;
 }
 
 .homepage .swiper-pagination-bullet-active {
   background: #007aff;
   border-radius: 50%;
-} 
+}
 
 .homepage .bott_left .recomm_title_speaker {
   display: flex;
@@ -580,7 +576,7 @@ margin-left: 110px;
   justify-content: space-between;
 }
 
-.homepage  .recomm_title_speaker .recomm_organizator {
+.homepage .recomm_title_speaker .recomm_organizator {
   display: flex;
   align-items: center;
 }
@@ -624,22 +620,23 @@ margin-left: 110px;
   height: 8px;
   text-align: center;
   opacity: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 50%;
 }
 
 .homepage .swiper-pagination-bullet-active {
   background: #007aff;
   border-radius: 50%;
-} 
+}
 
 /* Comment */
 .homepage .comment_frame {
   width: 100%;
   height: 550px;
   flex-shrink: 0;
-  background-color: white;
+  background-color: #ffffff;
   padding: 50px 50px 50px 50px;
+  margin-top: 20px;
 }
 .homepage .comment_frame_box {
   color: #000;
@@ -655,7 +652,7 @@ margin-left: 110px;
   width: 584px;
   height: 53px;
   flex-shrink: 0;
-  color: rgba(0, 0, 0, 0.6);
+  color: black;
   text-align: center;
   font-family: Poppins;
   font-size: 16px;

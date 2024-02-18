@@ -5,7 +5,7 @@ import Badge from "@mui/material/Badge";
 
 export function NavbarBook(props: any) {
   return (
-    <div className="format_book">
+    <div className="format_book home_navbar">
       <Container>
         <Stack
           flexDirection={"row"}
@@ -13,7 +13,7 @@ export function NavbarBook(props: any) {
           justifyContent={"space-between"}
         >
           <Box>
-            <img className={"logo_img"} src={"/icons/logo.png"} />
+          <img className={"logo_img"} src="https://rails-assets-us.bookshop.org/assets/bcorp_logo-dbd633d3bd3540edec0d2271427738792bd79e1aae13585deec0b658d29ddc08.png" />
           </Box>
           <Stack
             flexDirection={"row"}
