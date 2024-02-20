@@ -6,12 +6,19 @@
   flex-direction: row;
   justify-content: space-between;
 }
+.all_book {
+  width: 100%;
+  height: auto;
+  position: relative;
+  justify-content: space-between;
+}
 
 .book_page .all_book .fil_search_box {
   width: 280px;
   height: 530px;
-  margin-top: 300px;
+  margin-top: 226px;
   margin-right: 18px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -153,15 +160,13 @@
   border-radius: 18.5px;
   background: #f8be69;
 }
-
 .book_page .all_book .all_book_box {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 20px;
-  padding-left: 20px;
+  margin-top: 200px;
   width: 100%;
+  height: auto;
 }
 .book_page .all_book .book_box {
   margin: 13px;
@@ -207,8 +212,6 @@
   line-height: normal;
 }
 
-
-
 .book_page .all_book_box .our_service b {
   color: #755a7d;
   font-family: Poppins;
@@ -217,19 +220,18 @@
   font-weight: 400;
   line-height: normal;
 }
-.book_page .picture {
+.book_page .picture_box {
+  width: 100%;
   height: auto;
-  width: calc(100% - 70px);
-  max-width: 1366px;
-  padding: 0 !important;
-  margin: 0 auto 40px;
-  clear: both;
+  margin-top: 150px;
 }
-.book_page .picture_box .picture_main {
+.book_page .picture_box .picture_main img {
   position: relative;
   margin: 0 auto;
   height: auto;
+  width: 100%;
   z-index: 0;
+  background-size: cover;
 }
 
 /* SINGLE_PAGE */
@@ -238,7 +240,7 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-color:#fffcfc;
+  background-color: #fffcfc;
 }
 
 .book_page .single_page {
@@ -266,7 +268,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 43px;
-  color:#140342;
+  color: #140342;
   padding: 0px 15px;
 }
 .book_page .single_page .Single_search_big_box {
@@ -275,9 +277,8 @@
   height: 33px;
   display: flex;
   align-items: center;
-  background: #fffcfc;
-  /* border: 1px solid #ffffff; */
-  box-shadow: 0px 4px 4px rgba(213, 213, 213, 0.25);
+  background: #e4dddd;
+  box-shadow: 0px 4px 4px rgba(255, 251, 251, 0.25);
   border-radius: 18.5px;
   box-sizing: border-box;
 }
@@ -304,7 +305,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
-  color:#000;
+  color: #000000;
 }
 
 .book_page .single_page .Single_button_search {
@@ -429,8 +430,13 @@
   justify-content: space-between;
 }
 
+
+.book_page .single_page .static_frame{
+  background-color: #380B46;
+}
+
 .book_page .single_page .static_info {
-  color: #140342;
+  color: rgba(255, 255, 255, 1);
   font-family: Poppins;
   font-size: 50px;
   font-style: normal;
@@ -439,7 +445,7 @@
   background-image: url("");
 }
 .book_page .single_page .static_text {
-  color: rgba(1, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 1);
   font-family: Poppins;
   font-size: 20px;
   font-style: normal;
@@ -489,7 +495,7 @@
 .book_page .single_page .main_box {
   width: 100%;
   height: 572px;
-  background-color:#fffcfc;
+  background-color: #fffcfc;
   margin-top: 2spx;
   display: flex;
 }
@@ -685,12 +691,10 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 2;
-  
 }
 .book_page .single_page .book_box .book_img:hover:before {
   border-radius: 0px 50px 0px 0px;
   opacity: 1;
-  
 }
 .book_page .single_book .book_img img {
   position: absolute;
@@ -853,19 +857,8 @@
   line-height: 26px;
   color: #090808;
 }
-.book_page .single_page .category_titla {
-  color: #090808;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 43px;
-}
 
-
-
-
-/*Chosen Dish Page*/
+/*Chosen Book Page*/
 
 .chosen_book_page {
   position: relative;
@@ -914,43 +907,50 @@
 }
 
 .chosen_book_info_container {
+  background: #ffffff;
+  display: flex;
   padding: 30px 40px;
   width: 623px;
-  height: 452px;
   display: flex;
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset,
-    0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
 .chosen_book_info_container .chosen_book_info_box {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  position: sticky;
+  top: 48px;
+  z-index: 2;
 }
 
-.chosen_book_info_box .book_txt {
+.chosen_book_info_box .book_title {
+  word-break: break-word;
+  margin-bottom: 96px;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 36px;
+  font-weight: 560;
+  font-size: 27px;
+  line-height: 40px;
   color: #000000;
 }
 
-.chosen_book_info_box .book_name {
-  margin-top: 16px;
+.chosen_book_info_box .book_name a {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 45px;
   color: #090808;
 }
-
+.chosen_book_info_box .ISNB {
+  color: #000;
+}
+.chosen_book_page .chosen_book_info_box .variant-barcode {
+  color: #000;
+  font-size: 18px;
+}
+.chosen_book_page .chosen_book_info_box .format {
+  color: #000;
+  font-size: 18px;
+}
 .chosen_book_info_container .book_text {
   width: 288px;
   height: 38px;
@@ -959,19 +959,6 @@
 
   font-family: Poppins;
   font-size: 30px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.chosen_book_info_container .resto_name {
-  width: 80px;
-  height: 16px;
-  flex-shrink: 0;
-
-  color: #000;
-  font-family: Poppins;
-  font-size: 10px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -990,31 +977,14 @@
   justify-content: space-between;
 }
 
-.chosen_book_info_container p {
-  width: 543px;
-  height: 112px;
-  flex-shrink: 0;
-
-  color: #2c261e;
-  font-family: Poppins;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.book_price_box {
+.chosen_book_info_container .price {
+  align-items: flex-start;
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-
-  width: 100%;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  margin-top: 10px;
-  line-height: normal;
+  letter-spacing: normal;
 }
 
 .book_price_box span {
@@ -1026,18 +996,27 @@
   line-height: normal;
 }
 
-.button_box {
-  width: 177.255px;
-  height: 20.974px;
-  flex-shrink: 0;
-  display: flex;
-  margin-top: 60px;
-  margin-left: 200px;
-  align-items: center;
-  font-family: Poppins;
-  font-size: 15px;
-  font-style: normal;
+.chosen_book_info_box .button_box {
+  background: #fc9823;
   font-weight: 600;
-  line-height: normal;
-  border-radius: 4px;
+  height: 40px;
+  width: 150px;
+  margin-left: 343px;
+  border-radius: 5px;
+}
+.chosen_book_info_box .button_box .button_name {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.category_titla {
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 43px;
+  flex-direction: row;
 }

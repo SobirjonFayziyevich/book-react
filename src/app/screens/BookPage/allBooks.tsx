@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, Button, FormControlLabel, FormGroup, Pagination, Stack } from "@mui/material";
+import {
+  Box,
+  Button,
+  FormControlLabel,
+  FormGroup,
+  Pagination,
+  Stack,
+} from "@mui/material";
 import Typography from "@mui/joy/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -23,7 +30,7 @@ import { Book } from "../../../types/user";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Marginer from "../../components";
 
-const order_list = Array.from(Array(4).keys());
+const order_list = Array.from(Array(8).keys());
 console.log(order_list);
 
 export function AllBooks() {
@@ -71,8 +78,7 @@ export function AllBooks() {
               </FormGroup>
             </Box>
             <CssVarsProvider>
-
-            <Box
+              <Box
                 className={"price_range"}
                 style={{ cursor: "pointer", marginLeft: "20px" }}
               >
@@ -130,7 +136,6 @@ export function AllBooks() {
                 </Box>
               </Box>
             </CssVarsProvider>
-           
 
             <Box className={"search_big_box"} style={{ marginBottom: "70px" }}>
               <form className={"search_form"} action={""} method={""}>
@@ -150,8 +155,7 @@ export function AllBooks() {
               </form>
             </Box>
           </Stack>
-          
-          <Stack className={"all_book_box"} sx={{ mr: "100px" }}>
+          <Stack className={"all_book_box"}>
             <CssVarsProvider>
               {order_list.map((ele) => {
                 return (
@@ -265,19 +269,15 @@ export function AllBooks() {
                 );
               })}
             </CssVarsProvider>
-          </Stack>  
-         
+          </Stack>
         </Stack>
       </Container>
 
-      <div className="picture">
-        <Box className="picture_box">
-               <div className="picture_main">
-                 <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28606_BB_B_OMP_02-01_b.jpg" />
-
-               </div>
-              </Box>
-              </div>   
+      <Box className="picture_box">
+        <div className="picture_main">
+          <img src="https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/01/30/28606_BB_B_OMP_02-01_b.jpg" />
+        </div>
+      </Box>
     </div>
   );
 }

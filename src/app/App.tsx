@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
 import {BookPage} from "./screens/BookPage";
 import {CommunityPage} from "./screens/CommunityPage";
 import {MemberPage} from "./screens/MemberPage";
-import {HelpPage} from "./screens/HelpPage";
+import { AboutPage } from './screens/AboutPage';
 import {LoginPage} from "./screens/LoginPage";
 import {HomePage} from "./screens/HomePage";
 import {OrdersPage} from "./screens/OrdersPage";
@@ -41,8 +41,8 @@ function App() {
           <Route path="/member-page">
             <MemberPage />
           </Route>
-          <Route path="/help">
-            <HelpPage />
+          <Route path="/about">
+            <AboutPage />
           </Route>
           <Route path="/login">
             <LoginPage />

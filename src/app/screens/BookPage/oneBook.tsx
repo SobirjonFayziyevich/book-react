@@ -170,8 +170,10 @@ export function OneBook() {
               </Box>
             </Stack>
           </Stack>
-          
-            <Stack
+
+        </Stack>
+
+        <Stack
             className={"static_frame"}
             flexDirection={"row"}
             justifyContent={"space-between"}
@@ -220,7 +222,6 @@ export function OneBook() {
               <Box className={"static_text"}>Our happy customersnt.</Box>
             </Stack>
           </Stack>
-        </Stack>
       </Container>
 
       <div className={"main_box"}>
@@ -368,24 +369,6 @@ export function OneBook() {
               );
             })}
           </Box>
-        </Stack>
-
-        <Stack
-          sx={{ mt: "60px" }}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Box className={"category_titla"}> Store Address </Box>
-          <iframe
-            style={{ marginTop: "60px" }}
-            src="https://image.cnbcfm.com/api/v1/image/100416482-google-map-maker-north-korea-google-youtube.jpg?v=1359477081&w=1600&h=900"
-            width="1320"
-            height="500"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
         </Stack>
       </Container>
     </div>

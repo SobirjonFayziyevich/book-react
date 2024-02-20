@@ -56,22 +56,43 @@ export function ChosenBook() {
           >
             {chosen_list.map((ele) => {
               const image_path = `/book/family.png`;
-            return (
-            <SwiperSlide>
-              <img
-                style={{ width: "100%", height: "100%" }}
-                src={image_path}
-              />
-            </SwiperSlide>
-            );
+              return (
+                <SwiperSlide>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    src={image_path}
+                  />
+                </SwiperSlide>
+              );
             })}
           </Swiper>
         </Stack>
-        
+
         <Stack className={"chosen_book_info_container"}>
           <Box className={"chosen_book_info_box"}>
-            <strong className={"book_txt"}>My Family and Other Animals</strong>
-            <span className={"book_name"}>My Family</span>
+            <strong className={"book_title"}>
+              My Family and Other Animals <br></br>{" "}
+            </strong>
+            <span className={"book_name"}>
+              <a>
+                <strong> Author(s): </strong>
+                Susan Kellogg
+                <br></br>
+              </a>
+            </span>
+            <strong className="ISNB">ISNB: </strong>
+            <span className="variant-barcode">
+              6523472947
+              <br></br>
+              <strong>Publication Data: </strong>
+              5/01/24
+              <br></br>
+              <strong>Pages: </strong>
+              218
+              <br></br>
+            </span>
+            <strong className="format">Format: Paperback</strong>
+            <br></br>
             <Box className={"rating_box"}>
               <Rating
                 name="half_rating"
@@ -102,7 +123,12 @@ export function ChosenBook() {
                 </div>
               </div>
             </Box>
-            <p className={"book_desc_info"}> very good book</p>
+            <div className={"price"}>
+              12 $
+              <div className={"button_box"}>
+              <Button className="button_name">ADD TO CART</Button>
+              </div>
+            </div>
 
             <Marginer
               direction="horizontal"
@@ -110,16 +136,33 @@ export function ChosenBook() {
               width="100%"
               bg="#000000"
             />
-            <div className={"book_price_box"}>
-              <span>Cost:</span>
-              <span>10$</span>
-            </div>
-            <div className={"button_box"}>
-              <Button>ADD TO CART</Button>
-            </div>
+            <p className="book_description">
+            Susan Kellogg's history of the Aztecs offers a concise yet comprehensive assessment of 
+            Aztec history and civilization, emphasizing how material life and the economy functioned 
+            in relation to politics, religion, and intellectual and artistic developments. Appreciating the vast number of 
+            sources available but also their limitations. 
+            </p>
           </Box>
         </Stack>
       </Container>
+
+      <Stack 
+      sx={{ mt: "60px" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+      >
+      <Box className={"category_titla"}> Store Address </Box>
+          <iframe
+            style={{ marginTop: "60px" }}
+            src="https://image.cnbcfm.com/api/v1/image/100416482-google-map-maker-north-korea-google-youtube.jpg?v=1359477081&w=1600&h=900"
+            width="1320"
+            height="500"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+      </Stack>
     </div>
   );
 }

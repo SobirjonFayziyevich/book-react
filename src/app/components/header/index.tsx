@@ -47,7 +47,7 @@ export function NavbarHome(props: any) {
             </Box>
             <Box className="hover-line" onClick={props.setPath}>
               <NavLink to="/help" activeClassName="uderline">
-                Help
+                About
               </NavLink>
             </Box>
           </Stack>
