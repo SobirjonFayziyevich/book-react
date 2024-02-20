@@ -28,7 +28,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 import { Book } from "../../../types/user";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Marginer from "../../components";
+import Marginer from "../../components/marginer";
 
 const order_list = Array.from(Array(8).keys());
 console.log(order_list);

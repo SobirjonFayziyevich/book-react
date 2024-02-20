@@ -14,7 +14,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { useParams } from "react-router-dom";
 import { Product } from "../../../types/product";
 import { Book } from "../../../types/user";
-import Marginer from "../../components";
+import Marginer from "../../components/marginer";
 
 const chosen_list = Array.from(Array(3).keys()); // creat Array function
 
