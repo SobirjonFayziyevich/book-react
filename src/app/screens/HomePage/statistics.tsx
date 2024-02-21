@@ -1,24 +1,23 @@
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 
-
 export function Statistics() {
   return (
     <div className="static_frame">
       <Container>
         <Stack
+          className="service_wrapper"
           flexDirection={"row"}
           justifyContent={"space-between"}
           alignItems={"center"}
           style={{ height: "314px" }}
-    
         >
           <Stack className={"static_box"} m={"20px"}>
             <div
-              className="static_icon"
+              className="static_image"
               style={{ width: "60px", height: "45px", marginBottom: "20px" }}
             >
-              <img src="./icons/icon.svg" />
+              <img className="service_img" src="./icons/icon.svg" />
             </div>
             <Box className={"static_info"}>Quick Delivery</Box>
             <Box className={"static_text"}>

@@ -40,10 +40,38 @@
   height: 800px;
   border-radius: 20px;
 }
+
+
 /* Statics */
 .homepage {
   background: #fff;
 }
+
+.static_frame  .service_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.static_frame .static_box{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all .3s;
+  width: 20%;
+}
+
+.static_frame .static_image{
+  align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
 .homepage .static_box .static_info {
   color: #000;
   font-family: Poppins;
@@ -52,6 +80,8 @@
   font-weight: 500;
   line-height: 24px; /* 109.091% */
 }
+
+
 .homepage .static_box .static_text {
   width: 245px;
   height: 64px;

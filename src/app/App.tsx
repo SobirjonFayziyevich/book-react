@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
 
 import {BookPage} from "./screens/BookPage";
-import {CommunityPage} from "./screens/CommunityPage";
+import { CommunityPage } from './screens/CommunityPage';
 import {MemberPage} from "./screens/MemberPage";
 import { AboutPage } from './screens/AboutPage';
 import {LoginPage} from "./screens/LoginPage";
