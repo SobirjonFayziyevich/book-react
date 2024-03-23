@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 // import { MemberPosts } from "./memberPosts";
-// import { MemberFollowers } from "./memberFollowers";
+import { MemberFollowers } from "./memberFollowers";
 // import { MemberFollowing } from "./memberFollowing";
 // import { MySettings } from "./mySettings";
 import SettingsIcon from "@mui/icons-material/Settings";
