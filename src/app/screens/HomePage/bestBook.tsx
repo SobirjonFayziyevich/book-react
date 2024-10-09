@@ -44,59 +44,55 @@ export function BestBook() {
     history.push(`/book/dish/${id}`);
   }; 
 
-  
-  return (
-  <div className="best_dishes_frame">
-            <Container>
-                <Stack
-                    flexDirection={"column"}
-                    alignItems={'center'}
-                >
-                    <Box className={'category_title'}>Trendagi Ovqatlar</Box>
-                    <Stack  sx={{mt: "43px"}} flexDirection={"row"}>
-                        {trendProducts.map((product: Product) => {
+   return (
+   <div className="best_dishes_frame">
+   <Container>
+    <Stack
+       flexDirection={"column"}
+       alignItems={'center'}
+       >
+      <Box className={'category_title'}>Top rated Books</Box>
+      <Stack  sx={{mt: "43px"}} flexDirection={"row"}>
+         {trendProducts.map((product: Product) => {
+          const image_path = `${serverApi}/${product.product_images[0]}`
 
-                             const image_path = `${serverApi}/${product.product_images[0]}`
-                                   // product sizelar un teorema.
-                            const size_volume = product.product_collection === 'drink'
-                             ? product.product_volume + ' l' 
-                             : product.product_size + ' size';      
+          const size_volume = product.product_collection === 'drink'
+           ? product.product_volume + ' l' 
+           : product.product_size + ' size';      
 
-                             return(
-                                <Box className="dish_box">
-                                <Stack className="dish_img"
-                                     sx={{
-                                         backgroundImage: `url(${image_path})`,
-                                }}
-                                >
-                                    <div className={"dish_sale"}>{size_volume}</div>
-                                    <div className={"view_btn"}>
-
-                                        {/*buyerdagi mantiq tugridan tugri chosen dishga kirish */}
-                                         <div onClick={() => chosenDishHandler(product._id)}>  
-                                            Batafsil ko'rinish
-                                            </div>
+           return(
+           <Box className="dish_box">
+           <Stack className="dish_img"
+             sx={{
+                backgroundImage: `url(${image_path})`,
+                 }}
+            >
+              <div className={"dish_sale"}>{size_volume}</div>
+              <div className={"view_btn"}>
+              <div onClick={() => chosenDishHandler(product._id)}>  
+                 See more
+              </div>
                                             
-                                        <img
-                                            src={"/icons/strilka.png"}
-                                            style={{ marginLeft: "9px" }}
-                                            />
-                                    </div>
-                                </Stack>
-                                <Stack className={"dish_desc"}>
-                                    <span className={"dish_title_text"}>{product.product_name}</span>
-                                    <span className={"dish_desc_text"}>
-                                        <MonetizationOn />
-                                        {product.product_price}
-                                    </span>
-                                </Stack>
-                            </Box>
-                            )
-                        })}
-                       
-                    </Stack>
+              <img
+              src={"/icons/strilka.png"}
+              style={{ marginLeft: "18px" }}
+              />
+              </div>
                 </Stack>
-            </Container>
-        </div>
-         );
+                <Stack className={"dish_desc"}>
+                  <span className={"dish_title_text"}>{product.product_name}</span>
+                  <span className={"dish_desc_text"}>
+                   <MonetizationOn />
+                    {product.product_price}
+                  </span>
+                </Stack>
+             </Box>
+                )
+             })}
+                       
+        </Stack>
+      </Stack>
+    </Container>
+  </div>
+  );
 }

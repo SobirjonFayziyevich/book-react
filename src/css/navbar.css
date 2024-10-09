@@ -7,17 +7,17 @@
 } 
 .format_book.home_navbar {
   width: 100%;
-  height: 800px;
+  height: 700px;
   display: flex;
-  background: url("https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/06/29567_Quote_B1_Discover_Swift_River_06_04_24.jpg");
-  background-size: cover;
+  background: url("https://img.kwcdn.com/product/open/2024-05-15/1715762686892-9c5f650e68c14ccf873ebdab80af84de-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp");
+  /* background-size: cover; */
 }
 
 .format_others.home_navbar{
   width: 100%;
   height: 800px;
   display: flex;
-  background: url("https://dispatch.barnesandnoble.com/content/dam/ccr/homepage/daily/2024/06/29567_Quote_B1_Discover_Swift_River_06_04_24.jpg");
+  background: url("https://media.istockphoto.com/id/1409274516/video/back-to-school-with-school-supplies-and-equipment-background-and-poster-for-back-to-school.jpg?s=640x640&k=20&c=eLUDPANXV_9Ty-62zAYJ_O9YWWO6AX-uZMJ7tSH_ASQ=");
   background-size: cover;
 }
 .home_navbar .navbar_config {
@@ -72,7 +72,7 @@
   position: relative;
   width: 277px;
   height: 277px;
-  margin-top: 41px;
+  margin-top:41px;
   margin-left: 494px;
   border-radius: 90px 0 0 0;
   background-size: cover;

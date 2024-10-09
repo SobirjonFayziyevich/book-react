@@ -307,7 +307,7 @@ export function OneBook(props: any) {
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("dish")}
+                  onClick={() => searchCollectionHandler("etc")}
                 >
                   Children
                 </Button>
