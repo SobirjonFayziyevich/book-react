@@ -75,19 +75,17 @@ export function ChosenBook(props: any) {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   const [productRebuild, setProductRebuild] = useState<Date>(new Date());
 
-  const dishRelatedProcess = async () => {
+  const bookRelatedProcess = async () => {
     try {
       const productService = new ProductApiService();
       const product: Product = await productService.getChosenProduct(book_id);
       setChosenProduct(product);
 
       const bookService = new BookApiService(); 
-      const book = await bookService.getChosenBookshop(
-        product.book_mb_id
-      );
+      const book = await bookService.getChosenBookshop(product.book_mb_id);
       setChosenBook(book);
     } catch (err) {
-      console.log(`dishRelatedProcess ERROR:`, err);
+      console.log(`bookRelatedProcess ERROR:`, err);
     }
   };
 
@@ -113,7 +111,7 @@ export function ChosenBook(props: any) {
   };
 
   useEffect(() => {
-    dishRelatedProcess().then();
+    bookRelatedProcess().then();
   }, [productRebuild]);
 
   return (
@@ -145,13 +143,13 @@ export function ChosenBook(props: any) {
           <Swiper
             className="dish_swiper_two"
             loop={true}
-            spaceBetween={50}
-            slidesPerView={3}
-            //    slidesPerView={chosenProduct?.product_images.length}
+            spaceBetween={27}
+            slidesPerView={4}
+            // slidesPerView={chosenProduct?.product_images.length}
             navigation={{
               nextEl: null,
             }}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode,Navigation,Thumbs]}
           >
             {chosenProduct?.product_images.map((ele: string) => {
               const image_path = `${serverApi}/${ele}`;

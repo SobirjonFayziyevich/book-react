@@ -140,7 +140,7 @@ export function AllBooks(props: any) {
               className={"fil_box"}
               style={{ cursor: "pointer", marginLeft: "20px" }}
             >
-              <div className="fil_box_name"> Sub Categories:</div>
+              <div className="fil_box_name">Sub Categories:</div>
 
               <FormGroup>
                 <FormControlLabel
@@ -205,7 +205,6 @@ export function AllBooks(props: any) {
                     ]}
                     valueLabelDisplay="on"
                     sx={{
-                      // Need both of the selectors to make it works on the server-side and client-side
                       [`& [style*="left:0%"], & [style*="left: 0%"]`]: {
                         [`&.${sliderClasses.markLabel}`]: {
                           transform: "none",

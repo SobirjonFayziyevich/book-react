@@ -23,9 +23,9 @@ export interface HomePageState {
 
 
 export interface BookPageState {
+    targetBooks: Book[];    // kitoblar ruyxati 
     randomBooks: Book[];
-    targetBooks: Book[];
-    chosenBook: Book | null;
+    chosenBook: Book | null;  // kitoblar haqidagi malumotlarni joylashtirdim.
     targetProducts: Product[];
     chosenProduct: Product | null;
 }

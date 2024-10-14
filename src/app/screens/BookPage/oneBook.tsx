@@ -45,14 +45,12 @@ import BookApiService from "../../apiServices/bookApiService";
 
 /** REDUX SLICE */
 const actionDispatch = (dispatch: Dispatch) => ({
-
   setRandomBooks: (data: Book []) =>
     dispatch(setRandomBooks(data)), 
-
-    setChosenBook: (data: Book []) =>
+  setChosenBook: (data: Book []) =>
     dispatch(setChosenBook(data)), 
-
-    setTargetProducts: (data: Product[]) => dispatch(setTargetProducts(data)),
+  setTargetProducts: (data: Product[]) => 
+    dispatch(setTargetProducts(data)),
 });
 
 /** REDUX SELECTOR */
@@ -122,7 +120,7 @@ export function OneBook(props: any) {
     setChosenBookId(id);
     targetProductSearchObj.book_mb_id = id;
     setTargetProductSearchObj({ ...targetProductSearchObj });
-    history.push(`/book_id/${id}`);
+    history.push(`/book/${id}`);
   };
 
   const searchCollectionHandler = (collection: string) => {
@@ -137,7 +135,7 @@ export function OneBook(props: any) {
     setTargetProductSearchObj({ ...targetProductSearchObj });
   };
   const chosenDishHandler = (id: string) => {
-    history.push(`/book/dish/${id}`);
+    history.push(`/book/book/${id}`);
   };
 
   const targetLikeProduct = async (e: any) => {
@@ -279,35 +277,35 @@ export function OneBook(props: any) {
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("dessert")}
+                  onClick={() => searchCollectionHandler("history")}
                 >
                   History
                 </Button>
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("drink")}
+                  onClick={() => searchCollectionHandler("thriller")}
                 >
                   Thriller
                 </Button>
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("salad")}
+                  onClick={() => searchCollectionHandler("poetry")}
                 >
                   Poetry
                 </Button>
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("dish")}
+                  onClick={() => searchCollectionHandler("detective")}
                 >
                   Detective
                 </Button>
                 <Button
                   variant={"contained"}
                   color="secondary"
-                  onClick={() => searchCollectionHandler("etc")}
+                  onClick={() => searchCollectionHandler("children")}
                 >
                   Children
                 </Button>

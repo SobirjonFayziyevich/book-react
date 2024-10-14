@@ -41,7 +41,7 @@ export function BestBook() {
 
 /** HANDLERS */
   const chosenDishHandler = (id: string) => {
-    history.push(`/book/dish/${id}`);
+    history.push(`/book/book/${id}`);
   }; 
 
    return (
