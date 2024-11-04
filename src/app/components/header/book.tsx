@@ -32,9 +32,13 @@ export function NavbarBook(props: any) {
                 BookStore
               </NavLink>
             </Box>
+            {props.verifiedMemberData ? (
             <Box className="hover-line" onClick={props.setPath}>
-              <NavLink to="/orders">Order</NavLink>
-            </Box>
+            <NavLink to="/orders" activeClassName="uderline">
+              Order
+            </NavLink>
+          </Box>
+            ) : null}
             <Box className="hover-line" onClick={props.setPath}>
               <NavLink to="/community" activeClassName="uderline">
                 Community
