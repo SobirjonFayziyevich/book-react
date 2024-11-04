@@ -17,15 +17,12 @@ import { Product } from "../../../types/product";
 import { Book } from "../../../types/user";
 
 /** REDUX */
-import {
-  setChosenBook,
-  setChosenProduct,
-} from "../../screens/BookPage/slice";
+import { setChosenBook, setChosenProduct } from "../../screens/BookPage/slice";
 
 import {
-    retrieveChosenBook,
-    retrieveChosenProduct,
-    retrieveTargetProducts,
+  retrieveChosenBook,
+  retrieveChosenProduct,
+  retrieveTargetProducts,
 } from "../../screens/BookPage/selector";
 import { createSelector, Dispatch } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
@@ -44,8 +41,7 @@ import BookApiService from "../../apiServices/bookApiService";
 /** REDUX SLICE */
 const actionDispatch = (dispatch: Dispatch) => ({
   setChosenProduct: (data: Product) => dispatch(setChosenProduct(data)),
-  setChosenBook: (data: Book[]) =>
-  dispatch(setChosenBook(data)),
+  setChosenBook: (data: Book[]) => dispatch(setChosenBook(data)),
 });
 
 /** REDUX SELECTOR */
@@ -67,9 +63,7 @@ const chosenBookRetriever = createSelector(
 export function ChosenBook(props: any) {
   /** INITIALIZATION */
   let { book_id } = useParams<{ book_id: string }>();
-  const { setChosenProduct, setChosenBook } = actionDispatch(
-    useDispatch()
-  );
+  const { setChosenProduct, setChosenBook } = actionDispatch(useDispatch());
   const { chosenProduct } = useSelector(chosenProductRetriever);
   const { chosenBook } = useSelector(chosenBookRetriever);
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -81,7 +75,7 @@ export function ChosenBook(props: any) {
       const product: Product = await productService.getChosenProduct(book_id);
       setChosenProduct(product);
 
-      const bookService = new BookApiService(); 
+      const bookService = new BookApiService();
       const book = await bookService.getChosenBookshop(product.book_mb_id);
       setChosenBook(book);
     } catch (err) {
@@ -149,7 +143,7 @@ export function ChosenBook(props: any) {
             navigation={{
               nextEl: null,
             }}
-            modules={[FreeMode,Navigation,Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs]}
           >
             {chosenProduct?.product_images.map((ele: string) => {
               const image_path = `${serverApi}/${ele}`;
@@ -192,7 +186,6 @@ export function ChosenBook(props: any) {
                     checkedIcon={<Favorite style={{ color: "red" }} />}
                     id={chosenProduct?._id}
                     onClick={targetLikeProduct}
-                    /*@ts-ignore*/
                     checked={
                       chosenProduct?.me_liked &&
                       !!chosenProduct.me_liked[0]?.my_favorite
@@ -239,7 +232,3 @@ export function ChosenBook(props: any) {
     </div>
   );
 }
-
-
-
-

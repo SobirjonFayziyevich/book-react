@@ -1,31 +1,76 @@
 import  TabPanel  from "@mui/lab/TabPanel";
-import { Box, Stack } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
+import moment from "moment";
 
-const finishedOrders = [
-  [1, 2, 3],
-  [1, 2, 3],
-];
+// REDUX
+import { useSelector } from "react-redux";
+import { createSelector } from "reselect";
+import { serverApi } from "../../../lib/config";
+import { sweetErrorHandling, sweetFailureProvider } from "../../../lib/sweetAlert";
+import { Order } from "../../../types/order";
+import { Product } from "../../../types/product";
+import OrderApiService from "../../apiServices/orderApiService";
+import { verifiedMemberData } from "../../apiServices/verify";
+import { retrieveProcessOrders } from "../../screens/OrdersPage/selector";
+
+// REDUX SELECTOR
+const processOrdersRetriever = createSelector(
+  retrieveProcessOrders,
+  (processOrders) => ({
+    processOrders,
+  })
+);
+
+// const finishedOrders = [
+//   [1, 2, 3],
+//   [1, 2, 3],
+// ];
 
 export default function FinishedOrders(props: any) {
+  // INITIALIZATIONS
+  const { processOrders } = useSelector(processOrdersRetriever);
+
+   /** HANDLERS */
+ const finishOrderHandler = async (event: any ) => {
+  try{
+    const order_id = event.target.value;
+    const  data = {order_id: order_id, order_status: "FINISHED"};
+
+    if(!verifiedMemberData) { //ocalStorage ichidagi getItem da member_data mavjudmi?
+       sweetFailureProvider('Please login first', true);
+      }
+
+      let confirmation = window.confirm("Buyurtmani olganizni tasdiqlang?");
+      if(confirmation) {
+        const orderService = new OrderApiService();
+        await orderService.updateOrderStatus(data);
+        props.setOrderRebuild(new Date());
+       }
+   } catch(err) {
+     console.log("finishOrderHandler, ERROR:", err);
+     sweetErrorHandling(err).then();
+   }
+};
   return (
-    <TabPanel value={"3"}>
+    <TabPanel value={"2"}>
       <Stack>
-        {finishedOrders?.map((order) => {
+        {processOrders?.map((order: Order) => {
           return (
             <Box className="order_main_box">
               <Box className="order_box_scroll">
-                {order?.map((item) => {
-                  const image_path = `/book/family.png`;
+              {order?.order_items?.map((item) => {
+                 const product: Product = order.product_data.filter(ele => ele._id === item.product_id)[0];
+                 const image_path = `${serverApi}/${product?.product_images[0]}`;
                   return (
                     <Box className="ordersName_price">
                       <img src={image_path} className={"orderDishImg"} />
-                      <p className="titleDish">Children</p>
+                      <p className="titleDish">{product?.product_name}</p>
                       <Box className="priceBox">
-                        <p>$10</p>
+                        <p>${item.item_price}</p>
                         <img src="/icons/Close.svg" />
-                        <p>3</p>
+                        <p>{item.item_quantity}</p>
                         <img src="/icons/pause.svg" />
-                        <p style={{ marginLeft: "15px" }}>$13</p>
+                        <p style={{ marginLeft: "15px" }}>${item.item_price * item?.item_price}</p>
                       </Box>
                     </Box>
                   );
@@ -34,15 +79,30 @@ export default function FinishedOrders(props: any) {
 
               <Box className="total_price_box red_solid">
                 <Box className="boxTotal finish_total">
-                <p>mahsulot narxi</p>
-                  <p>$18</p>
+                <p>product cost</p>
+                  <p>${order.order_total_amount - order.order_delivery_cost}</p>
                   <img src="/icons/Plus.svg" style={{ marginLeft: "20px" }} />
-                  <p>Yetkazish hizmati</p>
-                  <p>$2</p>
+                  <p>delivery service</p>
+                  <p>${order.order_delivery_cost}</p>
                   <img src="/icons/Pause.svg" style={{ marginLeft: "20px" }} />
-                  <p>jami narxi</p>
-                  <p>$20</p>
+                  <p>total cost</p>
+                  <p>${order.order_total_amount}</p>
                 </Box>
+                <p className={"data_compl"}>
+                  {moment(order.createAt).format ("YY-MM-DD- HH:mm")}
+                  </p>
+                <Button
+                value={order._id}
+                onClick={finishOrderHandler}
+                  variant="contained"
+                  sx={{
+                    background: "rgb(2, 136, 209)",
+                    color: "rgb(255, 255, 255)",
+                    borderRadius: "10px",
+                  }}
+                >
+                  Finished
+                </Button>
               </Box>
             </Box>
           );

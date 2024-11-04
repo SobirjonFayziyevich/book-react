@@ -24,6 +24,8 @@ import { sweetFailureProvider, sweetTopSmallSuccessAlert } from '../lib/sweetAle
 import { Definer } from '../lib/Definer';
 import MemberApiService from './apiServices/memberApiService';
 import "./apiServices/verify";
+import { CartItem } from '../types/others';
+import { Product } from '../types/product';
 
 
 function App() {
@@ -36,11 +38,15 @@ function App() {
   const main_path = window.location.pathname;
   const [signUpOpen, setSignUpOpen] = useState(false); // signUpOpen ni qiymati false bulgani un shu qiymatni pass qildim.
   const [loginOpen, setLoginOpen] = useState(false);
+  const [orderRebuild, setOrderRebuild] = useState<Date>(new Date());
 
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl); // anchorEl true, yoki false beradi.
   
+  const cartJson: any = localStorage.getItem("cart_data");  // boshlangich qiymatni shakillantirish un getItem mathodi orqali amalga oshiriladi.
+  const current_cart: CartItem[] = JSON.parse(cartJson) ?? []; //
 
+  const [cartItems,setCartItems] = useState<CartItem[]>(current_cart);
 
 
 
@@ -85,6 +91,63 @@ const handleLogOutRequest = async () => {
       sweetFailureProvider(Definer.general_err1);
   }
 };
+const onAdd = (product: Product) => { //mahsulot qushish, bosganda productni olib bersin.onAdd restaurant pagega child sifatida pass buladi.
+  const exist: any = cartItems.find(
+      (item: CartItem) => item._id === product._id); // itemning Id teng bulsin Productning Idsiga.
+  if(exist) { // agar mavjud bulsa;
+      const cart_updated = cartItems.map((item: CartItem) =>
+      item._id === product._id  //itemning idsi productning idsiga teng bulgan holatda.
+      ? { ...exist, quantity: exist.quantity + 1 } // existni uzidan qiymatni olib, existni ichiagi quantityni qiymatini bittaga oshirsin.
+      : item // aks holat itemni qaytarsin.
+);
+    setCartItems(cart_updated);
+    localStorage.setItem("cart_data", JSON.stringify(cart_updated));
+
+  } else { //qiymatlar mavjud bulmsaa:
+      const new_item: CartItem = {
+       _id: product._id,
+       quantity: 1,
+       name: product.product_name,
+       price: product.product_price,
+       image: product.product_images[0],
+      };
+      const cart_updated = [...cartItems, { ...new_item }];
+        setCartItems(cart_updated);
+        localStorage.setItem("cart_data", JSON.stringify(cart_updated));
+  }
+};
+const onRemove = (item: CartItem) => {
+  const item_data: any = cartItems.find(
+    (ele: CartItem) => ele._id === item._id
+  );
+  if (item_data.quantity === 1) {
+    const cart_updated = cartItems.filter(
+      (ele: CartItem) => ele._id !== item._id
+    );
+    setCartItems(cart_updated);
+    localStorage.setItem("cart_data", JSON.stringify(cart_updated));
+  } else {
+    const cart_updated = cartItems.map((ele: CartItem) =>
+      ele._id === item._id
+        ? { ...item_data, quantity: item_data.quantity - 1 }
+        : ele
+    );
+    setCartItems(cart_updated);
+    localStorage.setItem("cart_data", JSON.stringify(cart_updated));
+  }
+};
+const onDelete = (item: CartItem) => {
+  const cart_updated = cartItems.filter(
+    (ele: CartItem) => ele._id !== item._id
+  );
+  setCartItems(cart_updated);
+  localStorage.setItem("cart_data", JSON.stringify(cart_updated));
+};                              // mahsulotni birtaga kamaytirsin,
+                               // mahsulotni uchirsin
+const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin 
+  setCartItems([]);
+  localStorage.removeItem("cart_data");
+};  
 
   return (
     <Router>
@@ -135,7 +198,10 @@ const handleLogOutRequest = async () => {
             <CommunityPage />
           </Route>
           <Route path="/orders">
-            <OrdersPage />
+            <OrdersPage  
+            orderRebuild={orderRebuild} 
+            setOrderRebuild={setOrderRebuild}
+             />
           </Route>
           <Route path="/member-page">
             <MemberPage />

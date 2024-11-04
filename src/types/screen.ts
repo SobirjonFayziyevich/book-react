@@ -1,4 +1,5 @@
 import { BoArticle } from "./boArticle";
+import { Order } from "./order";
 import { Product } from "./product";
 import { Book } from "./user";
 
@@ -6,6 +7,7 @@ import { Book } from "./user";
 export interface AppRootState {
     homePage: HomePageState;
     bookPage: BookPageState;
+    ordersPage: OrdersPageState;
 }
 
 
@@ -20,12 +22,17 @@ export interface HomePageState {
 }
 
 /** BOOK PAGE */
-
-
 export interface BookPageState {
     targetBooks: Book[];    // kitoblar ruyxati 
     randomBooks: Book[];
     chosenBook: Book | null;  // kitoblar haqidagi malumotlarni joylashtirdim.
     targetProducts: Product[];
     chosenProduct: Product | null;
+}
+
+/** ORDERS PAGE */
+export interface OrdersPageState {
+    pausedOrders: Order[];
+    processOrders: Order[];
+    finishedOrders: Order[];
 }

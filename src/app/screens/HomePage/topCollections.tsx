@@ -90,7 +90,7 @@ import { verifiedMemberData } from "../../apiServices/verify";
         <Stack
           flexDirection={"column"}
           alignItems={"center"}
-          sx={{ mt: "45px" }}
+          sx={{ mt: "60px" }}
         >
           <Box className={"category_title"}>Most Popular Books</Box>
           <Stack sx={{ mt: "43px" }} flexDirection={"row"} m={"16px"}>
