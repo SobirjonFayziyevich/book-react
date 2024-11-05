@@ -3,6 +3,9 @@ import { Box, Button, Container, IconButton, ListItemIcon, Menu, MenuItem, Stack
 import { NavLink } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import { Logout } from "@mui/icons-material";
+import { useHistory } from "react-router-dom";
+import { verifiedMemberData } from "../../apiServices/verify";
+import Basket from "./basket";
 
 export function NavbarBook(props: any) {
   return (
@@ -56,8 +59,10 @@ export function NavbarBook(props: any) {
                 About
               </NavLink>
             </Box>
+            
+            <Basket />
 
-            <Box className="hover-line">
+            {/* <Box className="hover-line">
               <IconButton
                 aria-label="cart"
                 id="basic-button"
@@ -69,7 +74,7 @@ export function NavbarBook(props: any) {
                   <img className={"icon_img"} src={"/icons/sav.png"} />
                 </Badge>
               </IconButton>
-            </Box>
+            </Box> */}
             
             <Box>
             {!props.verifiedMemberData ? (

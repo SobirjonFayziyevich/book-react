@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 import Badge from "@mui/material/Badge";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { Logout } from "@mui/icons-material";
-
+import  Basket from "./basket";
+import { verifiedMemberData } from '../../apiServices/verify';
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -64,7 +65,9 @@ export function NavbarHome(props: any) {
             </Box>
           </Stack>
 
-          <Box className="hover-line">
+          < Basket />
+
+          {/* <Box className="hover-line">
             <IconButton
               aria-label="cart"
               id="basic-button"
@@ -76,9 +79,9 @@ export function NavbarHome(props: any) {
                 <img className={"icon_img"} src={"/icons/sav.png"} />
               </Badge>
             </IconButton>
-          </Box>
+          </Box> */}
 
-          <Box>
+          {/* <Box>
             <Button
               className="navbar_button"
               style={{ color: "#FFFFFF", background: "#8D28AD" }}
@@ -86,7 +89,7 @@ export function NavbarHome(props: any) {
             >
               SignUp
             </Button>
-          </Box>
+          </Box> */}
 
           {!props.verifiedMemberData ? (
             <Box>
