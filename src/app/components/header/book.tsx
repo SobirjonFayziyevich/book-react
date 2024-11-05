@@ -60,7 +60,7 @@ export function NavbarBook(props: any) {
               </NavLink>
             </Box>
             
-            <Basket />
+            <Basket cartItems={props.cartItems}/>
 
             {/* <Box className="hover-line">
               <IconButton

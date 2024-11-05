@@ -115,14 +115,14 @@ export default function Basket(props: any) {
 
           <Box className={"orders_main_wrapper"}>
             <Box className={"orders_wrapper"}>
-              {cartItems?.map((item: CartItem) => {
+              {cartItems.map((item: CartItem) => {
                 const image_path = `${serverApi}/${item.image}`;
                 return (
                   <Box key={item?._id} className={"basket_info_box"}>
                     <div className={"cancel_btn"}>
                       <CancelIcon
                         color={"primary"}
-                        onClick={(e) => onDelete(item)}
+                        onClick={() => onDelete(item)}
                       />
                     </div>
                     <img src={image_path} className={"product_img"} />
@@ -133,13 +133,14 @@ export default function Basket(props: any) {
                     <Box sx={{ minWidth: 120 }}>
                       <div className="col-2">
                         <button
-                          onClick={(e) => onRemove(item)}
+                          onClick={() => onRemove(item)}
                           className="remove"
                         >
                           -
                         </button>
 
-                        <button onClick={(e) => onAdd(item)} className="add">
+                        <button 
+                        onClick={() => onAdd(item)} className="add">
                           +
                         </button>
                       </div>

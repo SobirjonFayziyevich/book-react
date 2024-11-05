@@ -162,6 +162,8 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
         handleCloseLogOut={handleCloseLogOut}
         handleLogOutRequest={handleLogOutRequest}
         verifiedMemberData={verifiedMemberData}
+        cartItems={cartItems}
+        onAdd={onAdd}
          />
 
       ): main_path.includes("book") ? (
@@ -176,6 +178,9 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
          handleCloseLogOut={handleCloseLogOut}
          handleLogOutRequest={handleLogOutRequest}
          verifiedMemberData={verifiedMemberData}
+         onAdd={onAdd}
+         cartItems={cartItems}
+
          />
       ) : (
          <NavbarOthers 
@@ -188,11 +193,15 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
          handleCloseLogOut={handleCloseLogOut}
          handleLogOutRequest={handleLogOutRequest}
          verifiedMemberData={verifiedMemberData}
+         onAdd={onAdd}
+         cartItems={cartItems}
+
          />
       )}
         <Switch>
           <Route path="/book">
-            <BookPage />
+            <BookPage onAdd = {onAdd}  />
+            
           </Route>
           <Route path="/community">
             <CommunityPage />
