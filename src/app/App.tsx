@@ -164,6 +164,9 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
         verifiedMemberData={verifiedMemberData}
         cartItems={cartItems}
         onAdd={onAdd}
+        onRemove={onRemove}
+        onDelete={onDelete}
+        onDeleteAll={onDeleteAll}
          />
 
       ): main_path.includes("book") ? (
@@ -180,6 +183,9 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
          verifiedMemberData={verifiedMemberData}
          onAdd={onAdd}
          cartItems={cartItems}
+         onRemove={onRemove}
+         onDelete={onDelete}
+         onDeleteAll={onDeleteAll}
 
          />
       ) : (
@@ -195,6 +201,9 @@ const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin
          verifiedMemberData={verifiedMemberData}
          onAdd={onAdd}
          cartItems={cartItems}
+         onRemove={onRemove}
+         onDelete={onDelete}
+         onDeleteAll={onDeleteAll}
 
          />
       )}

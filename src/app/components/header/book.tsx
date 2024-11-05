@@ -60,7 +60,11 @@ export function NavbarBook(props: any) {
               </NavLink>
             </Box>
             
-            <Basket cartItems={props.cartItems}/>
+            <Basket 
+            cartItems={props.cartItems} 
+            onAdd={props.onAdd} 
+            onRemove={props.onRemove}
+            />
 
             {/* <Box className="hover-line">
               <IconButton
