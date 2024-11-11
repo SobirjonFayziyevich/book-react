@@ -65,7 +65,13 @@ export function NavbarHome(props: any) {
             </Box>
           </Stack>
 
-          < Basket />
+          < Basket 
+          cartItems={props.CartItems}
+          onAdd={props.onAdd}
+          onRemove={props.onRemove}
+          onDelete={props.onDelete}
+          onDeleteAll={props.onDeleteAll}
+          />
 
           {/* <Box className="hover-line">
             <IconButton

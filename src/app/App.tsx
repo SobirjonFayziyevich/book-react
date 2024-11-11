@@ -144,6 +144,7 @@ const onDelete = (item: CartItem) => {
   localStorage.setItem("cart_data", JSON.stringify(cart_updated));
 };                              // mahsulotni birtaga kamaytirsin,
                                // mahsulotni uchirsin
+
 const onDeleteAll = () => { // buyurtma amalga oshgach cartimni tozalab bersin 
   setCartItems([]);
   localStorage.removeItem("cart_data");

@@ -69,7 +69,12 @@ export function NavbarOthers(props: any) {
                 About
               </NavLink>
             </Box>
-            <Basket />
+            <Basket
+            cartItems={props.cartItems}
+            onAdd={props.onAdd}
+            onRemove={props.onRemove}
+            onDelete={props.onDelete}
+            onDeleteAll={props.onDeleteAll} />
 
             {/* <Box className="hover-line">
               <IconButton

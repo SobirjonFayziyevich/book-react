@@ -61,9 +61,11 @@ export function NavbarBook(props: any) {
             </Box>
             
             <Basket 
-            cartItems={props.cartItems} 
-            onAdd={props.onAdd} 
-            onRemove={props.onRemove}
+              cartItems={props.cartItems}
+              onAdd={props.onAdd}
+              onRemove={props.onRemove}
+              onDelete={props.onDelete}
+              onDeleteAll={props.onDeleteAll}
             />
 
             {/* <Box className="hover-line">

@@ -39,7 +39,7 @@ export default function Basket(props: any) {
     setAnchorEl(null);
   };
 
-  const processOrderHandler = async () => {
+  const processOrderHandler = async () => { // Order qilish processi start.
     try {
       assert.ok(verifiedMemberData, Definer.auth_err1);
       const order = new OrderApiService();
@@ -74,7 +74,6 @@ export default function Basket(props: any) {
         id="account-menu"
         open={open}
         onClose={handleClose}
-        // onClick={handleClose}
         PaperProps={{
           elevation: 0,
           sx: {
@@ -115,7 +114,7 @@ export default function Basket(props: any) {
 
           <Box className={"orders_main_wrapper"}>
             <Box className={"orders_wrapper"}>
-              {cartItems.map((item: CartItem) => {
+              {cartItems?.map((item: CartItem) => {
                 const image_path = `${serverApi}/${item.image}`;
                 return (
                   <Box key={item?._id} className={"basket_info_box"}>
