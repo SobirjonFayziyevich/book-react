@@ -17,9 +17,9 @@ export default class OrderApiService {
                 result = await axios.post(this.path + url, data, {
                     withCredentials: true,
                 });
-            console.log("state:::", result.data.state);
             assert.ok(result?.data, Definer.general_err1);
             assert.ok(result?.data?.state !== "fail", Definer.general_err1);
+            console.log("state:::", result.data.state);
            
 
             const order: Order = result.data.data;

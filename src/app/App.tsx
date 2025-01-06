@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter as Router, Switch, Route,} from "react-router-dom";
 
-import {BookPage} from "./screens/BookPage";
+import { BookPage } from "./screens/BookPage";
 import { CommunityPage } from './screens/CommunityPage';
-import {MemberPage} from "./screens/MemberPage";
+import { MemberPage } from "./screens/MemberPage";
 import { HelpPage } from './screens/HelpPage';
-import {LoginPage} from "./screens/LoginPage";
-import {HomePage} from "./screens/HomePage";
-import {OrdersPage} from "./screens/OrdersPage";
+import { LoginPage } from "./screens/LoginPage";
+import { HomePage } from "./screens/HomePage";
+import { OrdersPage } from "./screens/OrdersPage";
 import "../css/navbar.css";
 import "../css/App.css";
 import "../css/footer.css";
@@ -31,9 +31,7 @@ import { Product } from '../types/product';
 function App() {
   /**  INITIALIZATIONS */
   
-  const  [verifiedMemberData, setVerifiedMemberdata] = useState<Member | null>(
-    null
-  );
+  const  [verifiedMemberData, setVerifiedMemberdata] = useState<Member | null>( null );
   const  [path, setPath] = useState();
   const main_path = window.location.pathname;
   const [signUpOpen, setSignUpOpen] = useState(false); // signUpOpen ni qiymati false bulgani un shu qiymatni pass qildim.
@@ -46,7 +44,7 @@ function App() {
   const cartJson: any = localStorage.getItem("cart_data");  // boshlangich qiymatni shakillantirish un getItem mathodi orqali amalga oshiriladi.
   const current_cart: CartItem[] = JSON.parse(cartJson) ?? []; //
 
-  const [cartItems,setCartItems] = useState<CartItem[]>(current_cart);
+  const [cartItems,setCartItems] = useState<CartItem[]>(current_cart);  
 
 
 
@@ -122,9 +120,9 @@ const onRemove = (item: CartItem) => {
   );
   if (item_data.quantity === 1) {
     const cart_updated = cartItems.filter(
-      (ele: CartItem) => ele._id !== item._id
+      (ele: CartItem) => ele._id !== item._id //elening id si item id ga teng bulmaganda qiymatni qaytarsin.
     );
-    setCartItems(cart_updated);
+    setCartItems(cart_updated); // qaytgan qiymatni set qilishim kerak.
     localStorage.setItem("cart_data", JSON.stringify(cart_updated));
   } else {
     const cart_updated = cartItems.map((ele: CartItem) =>
